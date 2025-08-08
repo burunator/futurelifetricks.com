@@ -342,6 +342,9 @@
   .inline-block {
     display: inline-block;
   }
+  .aspect-\[785\/492\] {
+    aspect-ratio: 785/492;
+  }
   .h-1 {
     height: calc(var(--spacing) * 1);
   }

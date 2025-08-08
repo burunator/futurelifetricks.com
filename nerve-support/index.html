@@ -62,14 +62,24 @@
         </p>
 
         <!-- Hero Image mit Link -->
-        <div class="w-full max-w-2xl mx-auto mb-6 sm:mb-8">
-            <a id="cta-button" href="https://mweblynix.com/7740/134/210/?subid=[cmc_vid]">
-                <img src="/img/hero-nerve.png" alt="Main Visual"
-                    class="w-full h-auto rounded-lg shadow-md object-cover transition duration-300 hover:brightness-105"
-                    width="800" height="500" loading="lazy" decoding="async" />
+        <div class="flex justify-center mb-6 sm:mb-8">
+            <a href="https://mweblynix.com/7740/134/210/?subid=[cmc_vid]"
+                class="w-full max-w-screen-md aspect-[785/492]" aria-label="Watch the video">
+                <picture>
+
+
+                    <!-- WebP Desktop/Tablet -->
+                    <source srcset="/img/hero-nerve.png" media="(min-width: 768px)" type="image/webp" />
+                    <!-- WebP Mobile (kleinere Datei) -->
+                    <source srcset="/img/hero-nerve_412.webp" media="(max-width: 767px)" type="image/webp" />
+
+                    <!-- Fallback (PNG/JPG) -->
+                    <img src="/img/hero-nerve.webp" alt="Nerve pain hero" class="w-full h-full rounded-xl object-cover"
+                        width="785" height="492" fetchpriority="high" decoding="async"
+                        sizes="(max-width: 767px) 100vw, 785px" />
+                </picture>
             </a>
         </div>
-
 
 
         <!-- Short Copy Section -->
