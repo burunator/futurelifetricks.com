@@ -188,6 +188,26 @@
             margin: 0 6px;
         }
     </style>
+
+    <!-- Start NB Pixel Snippet -->
+    <script>
+        !(function (e, n, t, i, p, a, s) {
+            e[i] ||
+                (((p = e[i] =
+                    function () {
+                        p.process ? p.process.apply(p, arguments) : p.queue.push(arguments);
+                    }).queue = []),
+                    (p.t = +new Date()),
+                    ((a = n.createElement(t)).async = 1),
+                    (a.src = 'https://static.newsbreak.com/business/tracking/nbpixel.js?t=' + 864e5 * Math.ceil(new Date() / 864e5)),
+                    (s = n.getElementsByTagName(t)[0]).parentNode.insertBefore(a, s));
+        })(window, document, 'script', 'nbpix'),
+            nbpix('init', 'ID-2080248870979563522'),
+            nbpix('event', 'pageload');
+    </script>
+    <!-- End NB Pixel Snippet -->
+
+
 </head>
 
 <body>
@@ -206,7 +226,8 @@
 
         </div>
 
-        <a class="cta" href="https://trk.futurelifetricks.com/click">Show Me the Nighttime Trick →</a>
+        <a class="cta" onclick="sendclicknb(event, this.href)" href="https://trk.futurelifetricks.com/click">Show Me the
+            Nighttime Trick →</a>
 
         <p class="proof">⭐⭐⭐⭐⭐ 4127+ Women sleeping soundly</p>
 
@@ -237,7 +258,8 @@
 
         <h2 class="center">"Curious what actually changed for me?"</h2>
 
-        <a class="cta" href="https://trk.futurelifetricks.com/click">→ Watch the Short Video Here</a>
+        <a class="cta" onclick="sendclicknb(event, this.href)" href="https://trk.futurelifetricks.com/click">→ Watch the
+            Short Video Here</a>
 
         <div class="media">
             <img src="/yu-sleep/public/img/imgi_3_1001864497.jpg" alt="">
@@ -266,7 +288,8 @@
         <h2 class="center">You Deserve a Good Night's Sleep
         </h2>
 
-        <a class="cta" href="https://trk.futurelifetricks.com/click">Yes, Show Me the Nighttime Trick</a>
+        <a class="cta" onclick="sendclicknb(event, this.href)" href="https://trk.futurelifetricks.com/click">Yes, Show
+            Me the Nighttime Trick</a>
 
         <p class="notice">⚠️ Note: This video has been shared widely and may not stay up for long.</p>
 
@@ -286,6 +309,22 @@
             <a href="/footer/contact.html">Contact</a>
         </p>
     </footer>
+
+    <script>
+        function sendclicknb(event, url) {
+            event.preventDefault();
+
+            try {
+                if (typeof nbpix === 'function') {
+                    nbpix('event', 'click_button');
+                }
+            } catch (e) { }
+
+            setTimeout(function () {
+                window.location.href = url;
+            }, 250);
+        }
+    </script>
 
 </body>
 

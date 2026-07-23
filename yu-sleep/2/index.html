@@ -231,6 +231,26 @@
             }
         }
     </style>
+
+    <!-- Start NB Pixel Snippet -->
+    <script>
+        !(function (e, n, t, i, p, a, s) {
+            e[i] ||
+                (((p = e[i] =
+                    function () {
+                        p.process ? p.process.apply(p, arguments) : p.queue.push(arguments);
+                    }).queue = []),
+                    (p.t = +new Date()),
+                    ((a = n.createElement(t)).async = 1),
+                    (a.src = 'https://static.newsbreak.com/business/tracking/nbpixel.js?t=' + 864e5 * Math.ceil(new Date() / 864e5)),
+                    (s = n.getElementsByTagName(t)[0]).parentNode.insertBefore(a, s));
+        })(window, document, 'script', 'nbpix'),
+            nbpix('init', 'ID-2080248870979563522'),
+            nbpix('event', 'pageload');
+    </script>
+    <!-- End NB Pixel Snippet -->
+
+
 </head>
 
 <body>
@@ -251,7 +271,7 @@
 
         </div>
 
-        <a class="cta" href="https://trk.futurelifetricks.com/click">
+        <a class="cta" onclick="sendclicknb(event, this.href)" href="https://trk.futurelifetricks.com/click">
             <b>Click Here</b>
             <span>To Find Out What Helped Me</span>
         </a>
@@ -308,7 +328,7 @@
 
         <p>I didn’t expect much, but I figured, what did I have to lose, so I tried it.</p>
 
-        <a class="cta" href="https://trk.futurelifetricks.com/click">
+        <a class="cta" onclick="sendclicknb(event, this.href)" href="https://trk.futurelifetricks.com/click">
             <b>Click Here</b>
             <span>To Find Out More</span>
         </a>
@@ -342,7 +362,7 @@
 
         <p><b>Don’t wait as long as I did. Try the sleep reset and get your life back.</b></p>
 
-        <a class="cta" href="https://trk.futurelifetricks.com/click">
+        <a class="cta" onclick="sendclicknb(event, this.href)" href="https://trk.futurelifetricks.com/click">
             <b>Click Here</b>
             <span>To Try The Morning Reset</span>
         </a>
@@ -362,6 +382,22 @@
             its respective owner.
         </p>
     </footer>
+
+    <script>
+        function sendclicknb(event, url) {
+            event.preventDefault();
+
+            try {
+                if (typeof nbpix === 'function') {
+                    nbpix('event', 'click_button');
+                }
+            } catch (e) { }
+
+            setTimeout(function () {
+                window.location.href = url;
+            }, 250);
+        }
+    </script>
 
 </body>
 
