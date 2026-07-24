@@ -4,7 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The 20-Second Morning Move That Finally Loosened My Stiff Knees</title>
+    <title>The Nighttime Trick That Stopped My 3 AM Wake-Ups</title>
+    <meta name="description"
+        content="I'd tried melatonin, magnesium, white noise. Nothing kept me asleep — until a friend sent me this.">
+    <meta name="robots" content="noindex, nofollow">
     <style>
         :root {
             --page-bg: #eceded;
@@ -64,21 +67,7 @@
             display: inline-block;
         }
 
-        /* Bild-Platzhalter, falls noch keine Datei da ist */
-        .ph {
-            width: 250px;
-            max-width: 70%;
-            height: 250px;
-            background: #d9d9d9;
-            border-radius: 4px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            color: #7a7a7a;
-            font-size: 13px;
-            text-align: center;
-            padding: 10px;
-        }
+
 
         .cta {
             display: block;
@@ -151,7 +140,7 @@
         }
 
         .spacer {
-            height: 430px;
+            height: 230px;
         }
 
         footer {
@@ -246,7 +235,7 @@
 
         <p>I wasn't stressed. I wasn't sick. I'd just... wake up. Wide awake. And the moment my eyes opened, my brain
             would helpfully serve up a fresh playlist of every worry I'd forgotten to panic about during the day. Bills.
-            The kids. That weird comment from my sister-in-law in 2021..</p>
+            The kids. That weird comment from my sister-in-law in 2021.</p>
 
         <p>My doctor called it "normal for my age." Which — respectfully — is the least helpful sentence in the English
             language.</p>
@@ -320,20 +309,15 @@
             <a href="/footer/contact.html">Contact</a>
         </p>
     </footer>
-
     <script>
         function sendclicknb(event, url) {
+
+            if (!window.nbpix || !nbpix.process) return;
+
+            try { nbpix('event', 'click_button'); } catch (e) { }
+
             event.preventDefault();
-
-            try {
-                if (typeof nbpix === 'function') {
-                    nbpix('event', 'click_button');
-                }
-            } catch (e) { }
-
-            setTimeout(function () {
-                window.location.href = url;
-            }, 250);
+            setTimeout(function () { window.location.href = url; }, 150);
         }
     </script>
 

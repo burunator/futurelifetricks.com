@@ -112,15 +112,7 @@
             margin: 0 0 22px
         }
 
-        .figure .cap {
-            background: var(--caption);
-            color: #fff;
-            font-size: 15px;
-            font-weight: 700;
-            text-align: center;
-            padding: 9px 12px;
-            line-height: 1.3;
-        }
+
 
         .figure img {
             width: 100%;
@@ -220,8 +212,8 @@
         <h1>The 30-Second Cherry Trick That Fixed My 3 AM Wake-ups, Calmed My Racing Mind &amp; Got Me 24 lbs Lighter
         </h1>
 
-        <a class="cta" href="https://trk.futurelifetricks.com/click" onclick="sendclicknb(event, this.href)"
-            data-cta="1">Click Here For The Cherry Trick!</a>
+        <a class="cta" href="https://trk.futurelifetricks.com/click" onclick="sendclicknb(event, this.href)">Click Here
+            For The Cherry Trick!</a>
 
         <div class="figure">
 
@@ -301,8 +293,8 @@
         <p>Thank God that one afternoon while I was scrolling my news feed, I found <strong>this article</strong> about
             a <strong>weird 30 second cherry trick</strong> that would <strong>change everything!</strong></p>
 
-        <a class="cta" href="https://trk.futurelifetricks.com/click" onclick="sendclicknb(event, this.href)"
-            data-cta="2">Click Here To For The 30 Sec Cherry
+        <a class="cta" href="https://trk.futurelifetricks.com/click" onclick="sendclicknb(event, this.href)">Click Here
+            For The 30 Sec Cherry
             Trick!</a>
 
         <p>Apparently, when you wake up in the middle of the night (especially around 3 AM), <strong>your cortisol
@@ -325,8 +317,8 @@
 
         <p>I figured, what did I have to lose, <strong>so I tried it.</strong></p>
 
-        <p><a class="inline" href="https://trk.futurelifetricks.com/click" onclick="sendclicknb(event, this.href)"
-                data-cta="3">Click Here For The 30-Second
+        <p><a class="inline" href="https://trk.futurelifetricks.com/click" onclick="sendclicknb(event, this.href)">Click
+                Here For The 30-Second
                 Cherry Trick That Fixed My 3 AM Wake-ups
                 (Works Tonight!)</a></p>
 
@@ -366,8 +358,8 @@
         <p>Truth is, my focus and mental clarity is back and <strong>I feel like myself</strong> for the first time in
             years. Everyone's been noticing...</p>
 
-        <a class="cta" href="https://trk.futurelifetricks.com/click" onclick="sendclicknb(event, this.href)"
-            data-cta="4">Click Here For The Cherry Trick!</a>
+        <a class="cta" href="https://trk.futurelifetricks.com/click" onclick="sendclicknb(event, this.href)">Click Here
+            For The Cherry Trick!</a>
 
         <footer>
             <p><strong>THIS IS AN ADVERTORIAL AND NOT AN ACTUAL NEWS ARTICLE, BLOG POST, OR CONSUMER PROTECTION
@@ -393,17 +385,13 @@
 
     <script>
         function sendclicknb(event, url) {
+
+            if (!window.nbpix || !nbpix.process) return;
+
+            try { nbpix('event', 'click_button'); } catch (e) { }
+
             event.preventDefault();
-
-            try {
-                if (typeof nbpix === 'function') {
-                    nbpix('event', 'click_button');
-                }
-            } catch (e) { }
-
-            setTimeout(function () {
-                window.location.href = url;
-            }, 250);
+            setTimeout(function () { window.location.href = url; }, 150);
         }
     </script>
 
