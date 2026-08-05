@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why You Fall Asleep Fine — But Snap Awake At 3AM</title>
+    <style>
+        :root {
+            --ink: #2b2b2b;
+            --body: #3a3a3a;
+            --muted: #8a8a8a;
+            --accent: #2f7d6f;
+            --accent-dark: #256256;
+            --cta: #e8622c;
+            --cta-dark: #cf521f;
+            --rule: #e6e6e6;
+            --card: #f5f5f3;
+            --green: #2fa36b;
+            --star: #f5a623;
+            --ph1: #e9e4f2;
+            --ph2: #dfeae8;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%;
+        }
+
+        body {
+            margin: 0;
+            background: #fff;
+            color: var(--body);
+            font-family: "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif;
+            font-size: 18px;
+            line-height: 1.72;
+        }
+
+        .wrap {
+            max-width: 680px;
+            margin: 0 auto;
+            padding: 0 22px 80px;
+        }
+
+        h1 {
+            font-size: 34px;
+            line-height: 1.24;
+            font-weight: 900;
+            color: var(--ink);
+            margin: 24px 0 20px;
+            letter-spacing: -.3px;
+        }
+
+        h2 {
+            color: var(--ink);
+            font-size: 24px;
+            line-height: 1.3;
+            font-weight: 800;
+            margin: 36px 0 16px;
+        }
+
+        p {
+            margin: 0 0 18px;
+        }
+
+        .lead {
+            font-size: 19px;
+        }
+
+        em,
+        i {
+            color: #4a4a4a;
+        }
+
+        .transition {
+            font-weight: 700;
+            color: var(--ink);
+            font-size: 19px;
+        }
+
+        figure {
+            margin: 22px 0;
+        }
+
+        .curve-figure {
+            border: 1px solid var(--rule);
+            border-radius: 12px;
+            padding: 10px 14px 6px;
+            background: #fff;
+        }
+
+        .curve-figure svg {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .curve-figure figcaption {
+            font-size: 14px;
+            color: var(--muted);
+            text-align: center;
+            line-height: 1.5;
+            margin: 4px 4px 8px;
+        }
+
+        /* Contrast box */
+        .contrast {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 22px 0;
+        }
+
+        .contrast .col {
+            border-radius: 10px;
+            padding: 18px 18px 16px;
+        }
+
+        .contrast .wrong {
+            background: #fdf1ec;
+            border: 1px solid #f3d6c9;
+        }
+
+        .contrast .right {
+            background: #eef6f3;
+            border: 1px solid #c6e0d8;
+        }
+
+        .contrast h4 {
+            margin: 0 0 10px;
+            font-size: 15px;
+            letter-spacing: .3px;
+            text-transform: uppercase;
+        }
+
+        .contrast .wrong h4 {
+            color: var(--cta-dark);
+        }
+
+        .contrast .right h4 {
+            color: var(--accent-dark);
+        }
+
+        .contrast p {
+            margin: 0;
+            font-size: 15.5px;
+            line-height: 1.55;
+            color: #444;
+        }
+
+        @media(max-width:560px) {
+            .contrast {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Checklist */
+        .checks {
+            list-style: none;
+            padding: 0;
+            margin: 18px 0 22px;
+        }
+
+        .checks li {
+            position: relative;
+            padding: 12px 14px 12px 46px;
+            margin-bottom: 10px;
+            background: var(--card);
+            border-radius: 8px;
+            font-size: 16.5px;
+            line-height: 1.55;
+        }
+
+        .checks li::before {
+            content: "✅";
+            position: absolute;
+            left: 14px;
+            top: 12px;
+            font-size: 18px;
+        }
+
+        .checks li b {
+            color: var(--ink);
+        }
+
+        /* Benefit blocks */
+        .benefits {
+            margin: 18px 0 8px;
+        }
+
+        .benefit {
+            border-left: 3px solid var(--accent);
+            background: #f7f9f8;
+            border-radius: 0 8px 8px 0;
+            padding: 14px 16px;
+            margin-bottom: 12px;
+        }
+
+        .benefit b {
+            color: var(--ink);
+        }
+
+        /* Ingredients */
+        .ingredients {
+            list-style: none;
+            padding: 0;
+            margin: 16px 0 8px;
+        }
+
+        .ingredients li {
+            position: relative;
+            padding: 8px 0 8px 24px;
+            margin-bottom: 4px;
+            font-size: 16.5px;
+            line-height: 1.55;
+            border-bottom: 1px solid #f0f0ee;
+        }
+
+        .ingredients li::before {
+            content: "";
+            position: absolute;
+            left: 2px;
+            top: 15px;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--accent);
+        }
+
+        .ingredients li b {
+            color: var(--ink);
+        }
+
+        .pathway-note {
+            text-align: center;
+            font-weight: 700;
+            color: var(--accent);
+            font-size: 18px;
+            margin: 14px 0 4px;
+        }
+
+        .pathway-sub {
+            text-align: center;
+            color: var(--muted);
+            font-size: 15px;
+            margin: 0 0 18px;
+        }
+
+        /* Risk box */
+        .risk-box {
+            background: #eef6f3;
+            border: 1px solid #c6e0d8;
+            border-radius: 12px;
+            padding: 22px 22px 18px;
+            margin: 24px 0;
+        }
+
+        .risk-box h3 {
+            margin: 0 0 10px;
+            font-size: 19px;
+            color: var(--accent-dark);
+            font-weight: 800;
+        }
+
+        .risk-box p {
+            margin: 0 0 10px;
+            font-size: 16.5px;
+        }
+
+        .risk-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Masthead */
+        .masthead {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 0 12px;
+            border-bottom: 1px solid var(--rule);
+            margin-bottom: 6px;
+        }
+
+        .masthead .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .masthead .brand img {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            display: block;
+        }
+
+        .masthead .brand .name {
+            font-size: 19px;
+            font-weight: 800;
+            color: var(--ink);
+            letter-spacing: -.2px;
+        }
+
+        .masthead .brand .name span {
+            color: var(--accent);
+        }
+
+        .masthead .ad-label {
+            font-size: 10px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--muted);
+            white-space: nowrap;
+        }
+
+        /* Footer */
+        .site-footer {
+            margin-top: 44px;
+            padding-top: 22px;
+            border-top: 1px solid var(--rule);
+            font-size: 12.5px;
+            line-height: 1.65;
+            color: #9a9a9a;
+        }
+
+        .site-footer .foot-brand {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            margin-bottom: 14px;
+        }
+
+        .site-footer .foot-brand img {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            display: block;
+        }
+
+        .site-footer .foot-brand .name {
+            font-size: 15px;
+            font-weight: 800;
+            color: #6f6f6f;
+        }
+
+        .site-footer .foot-brand .name span {
+            color: var(--accent);
+        }
+
+        .site-footer .disc-title {
+            font-weight: 700;
+            color: #7a7a7a;
+        }
+
+        .site-footer .footer-links {
+            margin: 16px 0 10px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 18px;
+        }
+
+        .site-footer .footer-links a {
+            color: #7a8f8a;
+            text-decoration: none;
+        }
+
+        .site-footer .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .site-footer .copyright {
+            margin-top: 12px;
+            color: #b0b0b0;
+        }
+
+        /* Reviews */
+        .review {
+            border: 1px solid var(--rule);
+            border-radius: 10px;
+            padding: 16px 18px;
+            margin: 14px 0;
+            background: #fff;
+        }
+
+        .review-head {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        .review .avatar {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            background: var(--ph1);
+            overflow: hidden;
+        }
+
+        .review .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .review .who {
+            font-weight: 700;
+            color: var(--ink);
+            font-size: 15px;
+            line-height: 1.2;
+        }
+
+        .review .verified {
+            font-size: 12px;
+            color: var(--accent);
+            font-weight: 600;
+            letter-spacing: .3px;
+        }
+
+        .review .stars {
+            color: var(--star);
+            font-size: 14px;
+            letter-spacing: 1px;
+            margin-left: auto;
+        }
+
+        .review p {
+            margin: 0;
+            font-style: italic;
+            color: #333;
+            font-size: 16px;
+        }
+
+        /* Sources */
+        .sources {
+            margin-top: 30px;
+            padding-top: 18px;
+            border-top: 1px solid var(--rule);
+            font-size: 12.5px;
+            line-height: 1.65;
+            color: #9a9a9a;
+        }
+
+        .sources p {
+            margin: 0 0 12px;
+        }
+
+        .sources .src-title {
+            font-weight: 700;
+            color: #7a7a7a;
+            letter-spacing: .3px;
+        }
+
+        .sources ul {
+            margin: 6px 0 0;
+            padding-left: 18px;
+        }
+
+        .sources li {
+            margin-bottom: 6px;
+            word-break: break-word;
+        }
+
+        .sources a {
+            color: #1a6fd6;
+            text-decoration: underline;
+        }
+
+        .sources a:hover {
+            color: #0d4c9e;
+        }
+
+        /* FAQ */
+        .faq {
+            margin: 10px 0 6px;
+        }
+
+        .faq .q {
+            font-weight: 700;
+            color: var(--ink);
+            margin: 18px 0 4px;
+            font-size: 17px;
+        }
+
+        .faq .a {
+            margin: 0;
+            color: var(--body);
+        }
+
+        /* CTA */
+        .cta-wrap {
+            text-align: center;
+            margin: 26px 0;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background: var(--cta);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 19px;
+            letter-spacing: .4px;
+            text-transform: uppercase;
+            padding: 17px 44px;
+            border-radius: 50px;
+            box-shadow: 0 6px 20px rgba(232, 98, 44, .35);
+            transition: background .15s, transform .15s;
+        }
+
+        .cta-btn:hover {
+            background: var(--cta-dark);
+            transform: translateY(-1px);
+        }
+
+        .cta-btn.green {
+            background: var(--accent);
+            box-shadow: 0 6px 20px rgba(47, 125, 111, .32);
+        }
+
+        .cta-btn.green:hover {
+            background: var(--accent-dark);
+        }
+
+        .guarantee {
+            margin-top: 12px;
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .final-cta {
+            background: linear-gradient(180deg, #fff4ee 0%, #f0f6f4 100%);
+            border: 1px solid #f2ddd0;
+            border-radius: 14px;
+            padding: 30px 24px;
+            text-align: center;
+            margin: 34px 0 10px;
+        }
+
+        .final-cta h2 {
+            margin: 0 0 8px;
+        }
+
+        .final-cta .sub {
+            color: #555;
+            font-size: 15.5px;
+            margin: 0 auto 18px;
+            max-width: 440px;
+        }
+
+        @media(max-width:560px) {
+            h1 {
+                font-size: 27px;
+            }
+
+            h2 {
+                font-size: 21px;
+            }
+
+            body {
+                font-size: 17px;
+            }
+
+            .cta-btn {
+                font-size: 17px;
+                padding: 15px 30px;
+            }
+        }
+    </style>
+
+    <!-- Hotjar Tracking Code for lunavelle -->
+    <script>
+        (function (h, o, t, j, a, r) {
+            h.hj = h.hj || function () { (h.hj.q = h.hj.q || []).push(arguments) };
+            h._hjSettings = { hjid: 6756337, hjsv: 6 };
+            a = o.getElementsByTagName('head')[0];
+            r = o.createElement('script'); r.async = 1;
+            r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window, document, 'https://static.hotjar.com/c/hotjar-', '.js?sv=');
+    </script>
+
+</head>
+
+<body>
+    <div class="wrap">
+
+        <header class="masthead">
+            <div class="brand">
+                <img src="/luna/public/f0bd0f60-b2f2-422e-983b-86c21d539b76 (1).png" alt="Futurelifetricks logo">
+                <div class="name">Future<span>life</span>tricks</div>
+            </div>
+            <div class="ad-label">Advertorial</div>
+        </header>
+
+        <h1>Why You Fall Asleep Fine — But Snap Awake At 3AM (It's Not What You've Been Treating)</h1>
+
+        <img src="/luna/public/blondie_hero.jpg" alt="Tired woman awake in bed in the middle of the night"
+            style="width:100%;border-radius:10px;display:block;">
+
+        <p class="lead">It's 3:02 in the morning.</p>
+
+        <p>You're awake again.</p>
+
+        <p>Not tossing. Not restless. Just… awake. Eyes open. Mind already running. Your body is exhausted, but
+            something flipped a switch, and now you're staring at the ceiling waiting for a morning you're going to
+            have to fake your way through.</p>
+
+        <p>Next to you, he's sound asleep. Of course he is.</p>
+
+        <p>And the worst part? You did everything right.</p>
+
+        <p>You went to bed on time. Cool room. Phone in the other room. Maybe a melatonin gummy, a magnesium powder, a
+            cup of "sleepy" tea. You fell asleep just fine.</p>
+
+        <p>So why are you wide awake at 3am?</p>
+
+        <p>For six years, that was my question. Tonight, I can finally answer it — and the answer is not what any
+            bottle on the shelf had ever told me.</p>
+
+        <h2>I Wasn't Bad At Sleeping. I Was Treating The Wrong Thing.</h2>
+
+        <p>Here's what a woman who works in women's health finally explained to me. It's so simple I was almost angry
+            no one had said it sooner.</p>
+
+        <p><strong>Falling asleep and staying asleep are two completely different problems.</strong></p>
+
+        <p>Almost every sleep product on the shelf is built for the first one.</p>
+
+        <p>Take melatonin. It's a "start" signal. It nudges you off to sleep at the beginning of the night. And for a
+            lot of women, that part was never the issue.</p>
+
+        <p>My issue was 3am.</p>
+
+        <p>A gummy you swallow at 10pm has faded hours before your body jolts awake. You're not failing at sleep.
+            You're taking something that clocks out five hours before the problem even starts.</p>
+
+        <figure>
+            <img src="/luna/public/blondie_collage.jpg" alt="Lunavelle sleep patch and box"
+                style="width:100%;border-radius:10px;display:block;">
+        </figure>
+
+        <div class="contrast">
+            <div class="col wrong">
+                <h4>What I'd Been Buying</h4>
+                <p>One push at bedtime that fades by midnight. Gone long before 3am — the exact moment I kept waking.
+                    It was never going to work.</p>
+            </div>
+            <div class="col right">
+                <h4>What I Actually Needed</h4>
+                <p>Steady support that lasts <em>through</em> the night — still working at 3am, when my sleep kept
+                    falling apart.</p>
+            </div>
+        </div>
+
+        <p>Read that again, because it reframes everything.</p>
+
+        <p>You didn't fail. You weren't lazy or broken or "just getting older." You were handed the right tool for the
+            wrong problem — over and over — and then blamed yourself when it didn't work.</p>
+
+        <figure class="curve-figure">
+            <svg width="100%" viewBox="0 0 700 440" fill="none" xmlns="http://www.w3.org/2000/svg"
+                font-family="Helvetica Neue, Helvetica, Arial, sans-serif" role="img"
+                aria-label="Chart comparing how long the Lunavelle patch, a melatonin pill, and other sleep aids keep working through the night, with the 3am wake-up marked.">
+                <rect width="700" height="440" fill="white" />
+                <g>
+                    <circle cx="70" cy="30" r="7" fill="#2f7d6f" />
+                    <text x="84" y="35" font-size="16" font-weight="700" fill="#2b2b2b">Lunavelle Patch</text>
+                    <circle cx="300" cy="30" r="7" fill="#e8622c" />
+                    <text x="314" y="35" font-size="16" font-weight="700" fill="#2b2b2b">Melatonin Pill</text>
+                    <circle cx="500" cy="30" r="7" fill="#9aa0a6" />
+                    <text x="514" y="35" font-size="16" font-weight="700" fill="#2b2b2b">Other Sleep Aids</text>
+                </g>
+                <g font-size="12" fill="#8a8a8a">
+                    <line x1="120" y1="90" x2="660" y2="90" stroke="#eee" />
+                    <line x1="120" y1="150" x2="660" y2="150" stroke="#eee" />
+                    <line x1="120" y1="210" x2="660" y2="210" stroke="#eee" />
+                    <line x1="120" y1="270" x2="660" y2="270" stroke="#eee" />
+                    <line x1="120" y1="330" x2="660" y2="330" stroke="#eee" />
+                    <text x="112" y="94" text-anchor="end">High</text>
+                    <text x="112" y="214" text-anchor="end">Med</text>
+                    <text x="112" y="334" text-anchor="end">Low</text>
+                </g>
+                <line x1="120" y1="70" x2="120" y2="360" stroke="#cfcfcf" stroke-width="1.5" />
+                <line x1="120" y1="360" x2="670" y2="360" stroke="#cfcfcf" stroke-width="1.5" />
+                <g font-size="13" fill="#5a5a5a" text-anchor="middle">
+                    <text x="150" y="384" font-weight="700">Bedtime</text>
+                    <text x="285" y="384">1am</text>
+                    <text x="420" y="384" font-weight="800" fill="#2b2b2b">3am</text>
+                    <text x="555" y="384">5am</text>
+                    <text x="640" y="384" font-weight="700">Morning</text>
+                </g>
+                <text x="395" y="418" font-size="15" font-weight="700" fill="#2b2b2b" text-anchor="middle">Through the
+                    night</text>
+                <line x1="420" y1="80" x2="420" y2="360" stroke="#e8622c" stroke-width="1.5" stroke-dasharray="5 5"
+                    opacity="0.5" />
+                <text x="420" y="78" font-size="12" font-weight="800" fill="#e8622c" text-anchor="middle">the 3am
+                    wake-up</text>
+                <path d="M120 355 L175 250 L360 250 L400 320 L560 320" fill="none" stroke="#9aa0a6" stroke-width="3"
+                    stroke-linejoin="round" stroke-linecap="round" />
+                <path d="M120 355 C160 200, 210 170, 260 185 C340 210, 470 300, 620 345" fill="none" stroke="#e8622c"
+                    stroke-width="3.5" stroke-linecap="round" />
+                <path d="M120 355 C160 130, 210 100, 275 100 C400 100, 540 170, 660 340" fill="#2f7d6f"
+                    fill-opacity="0.10" stroke="#2f7d6f" stroke-width="4" stroke-linecap="round" />
+                <circle cx="420" cy="128" r="5.5" fill="#2f7d6f" />
+                <circle cx="420" cy="272" r="5.5" fill="#e8622c" />
+            </svg>
+            <figcaption>Why a bedtime pill can't reach your 3am wake-up — it's already faded by the time you snap awake.
+            </figcaption>
+        </figure>
+
+        <p class="transition">So what finally worked for me? It wasn't another pill. And it wasn't willpower.</p>
+
+        <h2>Then She Said The Word "Patch," And I Almost Laughed</h2>
+
+        <p>My first thought was the sticky thing you slap on a sore shoulder. I nearly changed the subject.</p>
+
+        <p>But stay with me, because the reason it works is the whole point.</p>
+
+        <p>It's called Lunavelle. It isn't a pill, a gummy, or a powder. It's a thin patch you wear on your skin
+            overnight. And it contains zero melatonin.</p>
+
+        <p>A pill is one burst that fades. The patch works differently.</p>
+
+        <p>You stick it on your wrist or shoulder before bed. Then it releases its ingredients slowly — through the
+            skin, hour after hour, across the entire night. Including 3am. Including the exact window where everything
+            else had always quit on me.</p>
+
+        <p>That's the whole idea. Not something to help you <em>start</em> the night. Something built to carry you
+            <em>through</em> it.
+        </p>
+
+        <figure>
+            <img src="/luna/public/blondie_show.jpg" alt="Woman applying the Lunavelle patch to her arm before bed"
+                style="width:100%;border-radius:10px;display:block;">
+        </figure>
+
+        <h2>The First Morning I Woke Up And The Room Was Bright</h2>
+
+        <p>I won't oversell the first night. It wasn't a fairy tale.</p>
+
+        <p>But within a week, something changed. I was getting further into the night before waking. And when I did
+            stir, I slipped back under instead of lying there doing math about how many hours I had left.</p>
+
+        <p>Then came the morning that got me.</p>
+
+        <p>I opened my eyes and the room was already light. I braced for that familiar 3am jolt — and realized it never
+            came. I'd slept straight through.</p>
+
+        <p>But honestly? The nights weren't even the best part.</p>
+
+        <p>It was the mornings. No fog. No reaching for coffee just to form a sentence. I felt like <em>me</em> again —
+            and I hadn't noticed how far "me" had drifted until she came back.</p>
+
+        <!-- FIRST CTA — now fires at the emotional peak, after the product is revealed and the payoff is felt -->
+        <div class="cta-wrap">
+            <a class="cta-btn" href="https://trk.futurelifetricks.com/click">See What Made The Difference</a>
+        </div>
+
+        <h2>Four Reasons It Works When The Others Didn't</h2>
+
+        <p>Once I understood it, four things stood out. Each one quietly answered a doubt I'd built up over years of
+            being let down.</p>
+
+        <div class="benefits">
+            <div class="benefit"><b>It's still working at 3am.</b> The patch releases slowly through the skin all
+                night long — so it's there at the exact hour a bedtime pill has already worn off. That's the reason
+                it's made to help you <em>stay</em> asleep, not just fall asleep.</div>
+            <div class="benefit"><b>No melatonin, no hormones.</b> It's built to work with your body's own rhythm
+                instead of overriding it. No hormone hangover. No strange, vivid dreams. No feeling "off" the next
+                day.</div>
+            <div class="benefit"><b>Natural ingredients you can use every night.</b> A blend of calming botanicals
+                meant to become part of your routine — without the dependency worry that shadows a lot of sleep
+                aids.</div>
+            <div class="benefit"><b>You wake up clear, not drugged.</b> Nothing goes through your stomach, so most
+                women report waking up sharp and rested — not groggy, not hungover, not fighting to get going.</div>
+        </div>
+
+        <div class="cta-wrap">
+            <a class="cta-btn green" href="https://trk.futurelifetricks.com/click">See If It's Right For You</a>
+        </div>
+
+        <h2>What's Actually Inside It</h2>
+
+        <p>Most sleep products lean on one ingredient and hope. Lunavelle uses 11, chosen to calm the body and hold
+            steady across the whole night:</p>
+
+        <figure>
+            <img src="/luna/public/dd47c84e-987b-4336-a5a4-84c695b34f5a.jpeg" alt="Ingredient and pathway overview"
+                style="width:100%;border-radius:10px;display:block;">
+        </figure>
+
+        <ul class="ingredients">
+            <li><b>Magnesium Glycinate</b> — a gentle, absorbable magnesium that helps settle the nervous system and
+                quiet nighttime restlessness.</li>
+            <li><b>L-Theanine</b> — an amino acid from green tea that helps switch off a racing mind.</li>
+            <li><b>GABA</b> — a naturally occurring compound that helps calm mental "chatter" before bed.</li>
+            <li><b>Valerian Root</b> — a botanical used for centuries to ease tension and invite rest.</li>
+            <li><b>Ashwagandha</b> — an adaptogen that helps the body stay balanced and at ease.</li>
+            <li><b>Tart Cherry</b> — a fruit extract valued for supporting a healthy nighttime rhythm.</li>
+            <li><b>Passion Flower, Hops, Chamomile &amp; Lavender</b> — familiar calming botanicals that help you wind
+                down.</li>
+            <li><b>Jujube Seed</b> — traditionally used to support deeper, more restful sleep.</li>
+        </ul>
+
+        <p class="pathway-note">One patch. 11 ingredients. Working the whole night through.</p>
+        <p class="pathway-sub">Nothing to swallow. Nothing to sleep off in the morning.</p>
+
+        <h2>Why I Finally Said Yes</h2>
+
+        <p>After everything I'd wasted money on, I was done being talked into things. Two things made this one easy.</p>
+
+        <div class="risk-box">
+            <h3>About a dollar a night — and the risk is on them, not you</h3>
+            <p>A month's supply costs about what you'd spend on a couple of coffees. Less per night if you keep it in
+                your routine.</p>
+            <p>And every order comes with a <b>30-day money-back guarantee</b>. If you don't sleep better, you don't
+                pay. After years of throwing money at things that let me down, that was the line that finally let me
+                say yes.</p>
+        </div>
+
+        <p>The math wasn't complicated. Downside: one month, fully covered. Upside: my nights back, and my mornings
+            with them.</p>
+
+        <div class="cta-wrap">
+            <a class="cta-btn" href="https://trk.futurelifetricks.com/click">See If It's Right For You</a>
+        </div>
+
+        <h2>What Other Women Are Saying</h2>
+
+        <div class="review">
+            <div class="review-head">
+                <div class="avatar"><img src="/luna/public/Derila-455-150x150.webp" alt="Diane R."></div>
+                <div>
+                    <div class="who">Diane R., 57</div>
+                    <div class="verified">✔ Verified Buyer</div>
+                </div>
+                <div class="stars">★★★★★</div>
+            </div>
+            <p>"Four years of melatonin, magnesium, prescriptions — nothing held. The patch is the first thing that got
+                me past 2am without snapping wide awake. I finally feel rested."</p>
+        </div>
+
+        <div class="review">
+            <div class="review-head">
+                <div class="avatar"><img src="/luna/public/Derila-458-150x150.webp" alt="Carol M."></div>
+                <div>
+                    <div class="who">Carol M., 61</div>
+                    <div class="verified">✔ Verified Buyer</div>
+                </div>
+                <div class="stars">★★★★★</div>
+            </div>
+            <p>"I always thought melatonin just wasn't strong enough for me. Turns out I was taking the wrong thing. By
+                the third night I slept six hours straight. No grogginess, no odd dreams. I've reordered twice."</p>
+        </div>
+
+        <div class="review">
+            <div class="review-head">
+                <div class="avatar"><img src="/luna/public/Purisaki-73.webp" alt="Susan T."></div>
+                <div>
+                    <div class="who">Susan T., 64</div>
+                    <div class="verified">✔ Verified Buyer</div>
+                </div>
+                <div class="stars">★★★★★</div>
+            </div>
+            <p>"My husband noticed before I did. He said I seemed calmer — more like myself. I'd stopped dreading
+                bedtime without even realizing it."</p>
+        </div>
+
+        <img src="/luna/public/luna_testimonial.jpeg" alt="Happy rested woman in the morning"
+            style="width:100%;border-radius:10px;display:block;">
+
+        <!-- NEW CTA — catches readers convinced by the social proof -->
+        <div class="cta-wrap">
+            <a class="cta-btn green" href="https://trk.futurelifetricks.com/click">Join Them — See If It's Available</a>
+        </div>
+
+        <h2>The Questions Women Ask Before They Try It</h2>
+
+        <div class="faq">
+            <p class="q">Does it contain melatonin?</p>
+            <p class="a">No — and that's the point. Lunavelle is completely melatonin-free, made for women who want
+                nighttime support without adding another hormone to their routine.</p>
+
+            <p class="q">Where does the patch go?</p>
+            <p class="a">On clean, dry skin — usually the wrist, shoulder, or forearm. On before bed, off in the
+                morning. The whole thing takes about 30 seconds.</p>
+
+            <p class="q">Will I feel groggy the next day?</p>
+            <p class="a">Because it works through the skin instead of your stomach, most women report no morning
+                grogginess — one of the most common complaints with pills and gummies.</p>
+
+            <p class="q">What if it doesn't work for me?</p>
+            <p class="a">Every order is covered by a 30-day money-back guarantee. If you don't sleep better, you're
+                covered — so trying it costs you nothing but one night's application.</p>
+        </div>
+
+        <h2>Where To Get It</h2>
+
+        <p>Lunavelle is only sold through their official website, where they're currently running up to 70% off, with
+            the same 30-day money-back guarantee. If your 3am looks anything like mine used to, it's worth checking
+            whether it's still in stock in your area before you close this page.</p>
+
+        <ul class="checks">
+            <li>Built for the <b>staying-asleep</b> problem — not just falling asleep</li>
+            <li>Melatonin-free — works with your body, not against it</li>
+            <li>Releases all night, right through the hour you usually wake</li>
+            <li>About a dollar a night, backed by a 30-day money-back guarantee</li>
+        </ul>
+
+        <figure>
+            <img src="/luna/public/Lunavelle-52-1536x864.webp" alt="Lunavelle sleep patch product"
+                style="width:100%;border-radius:10px;display:block;">
+        </figure>
+
+        <!-- Final CTA -->
+        <div class="final-cta">
+            <h2>Get 70% Off Lunavelle Today</h2>
+            <p class="sub">Melatonin-free. Worn overnight. Backed by a 30-day money-back guarantee.</p>
+            <a class="cta-btn" href="https://trk.futurelifetricks.com/click">See If It's Right For You</a>
+            <div class="guarantee">30-Day Money-Back Guarantee · No subscription required</div>
+        </div>
+
+        <section class="sources">
+            <p>Research suggests that sleep quality can change with age, particularly as deep (slow-wave) sleep tends to
+                become shorter or less consistent in many adults — which may contribute to waking up feeling less rested
+                even after enough hours in bed. Hormonal shifts around menopause are also commonly associated with
+                disrupted or lighter sleep. Separately, research on transdermal delivery notes that ingredients absorbed
+                through the skin may bypass digestion and first-pass metabolism, which is one reason skin-patch delivery
+                is used in various wellness and medical contexts.</p>
+
+            <p>Lunavelle is a wellness product designed to support a calmer nighttime routine through selected
+                ingredients delivered via a skin patch. It is not intended to diagnose, treat, cure, or prevent any
+                disease. Individual experiences vary.</p>
+
+            <p class="src-title">SOURCES</p>
+            <ul>
+                <li>Harvard Medical School — Sleep &amp; Aging:
+                    <a href="https://sleep.hms.harvard.edu/education-training/public-education/sleep-and-health-education-program/sleep-health-education-79"
+                        target="_blank" rel="noopener">sleep.hms.harvard.edu</a>
+                </li>
+                <li>National Institute on Aging (NIH) — A Good Night's Sleep:
+                    <a href="https://www.nia.nih.gov/health/sleep/good-nights-sleep" target="_blank"
+                        rel="noopener">nia.nih.gov</a>
+                </li>
+                <li>Office on Women's Health — Menopause Symptoms &amp; Relief:
+                    <a href="https://www.womenshealth.gov/menopause/menopause-symptoms-and-relief" target="_blank"
+                        rel="noopener">womenshealth.gov</a>
+                </li>
+                <li>NCBI Bookshelf / StatPearls — Transdermal Medications &amp; First-Pass Metabolism:
+                    <a href="https://www.ncbi.nlm.nih.gov/books/NBK556035/" target="_blank"
+                        rel="noopener">ncbi.nlm.nih.gov</a>
+                </li>
+                <li>NIH Office of Dietary Supplements — Magnesium:
+                    <a href="https://ods.od.nih.gov/factsheets/Magnesium-HealthProfessional/" target="_blank"
+                        rel="noopener">ods.od.nih.gov</a>
+                </li>
+                <li>NIH NCCIH — Herbs at a Glance:
+                    <a href="https://www.nccih.nih.gov/health/herbsataglance" target="_blank"
+                        rel="noopener">nccih.nih.gov</a>
+                </li>
+            </ul>
+        </section>
+
+        <footer class="site-footer">
+            <div class="foot-brand">
+                <img src="/luna/public/f0bd0f60-b2f2-422e-983b-86c21d539b76 (1).png" alt=" logo">
+                <div class="name">Future<span>life</span>tricks</div>
+            </div>
+
+            <p><span class="disc-title">THIS IS AN ADVERTISEMENT AND NOT AN ACTUAL NEWS ARTICLE, BLOG, OR CONSUMER
+                    PROTECTION UPDATE.</span></p>
+
+            <p>Marketing Disclosure: This website is a marketplace. As such you should know that the owner has a
+                monetary connection to the products and services advertised on the site. The owner receives payment
+                whenever a qualified lead is referred, but that is the extent of it.</p>
+
+            <p>The statements on this page have not been evaluated by the Food and Drug Administration. This product is
+                not intended to diagnose, treat, cure, or prevent any disease. Individual results may vary. The story
+                and names referenced are illustrative and not necessarily those of real customers. Always consult your
+                physician or a qualified healthcare professional before starting any new supplement, particularly during
+                menopause or if you take medication.</p>
+
+            <div class="footer-links">
+                <a href="/footer/terms-of-service.html">Terms &amp; Conditions</a>
+                <a href="/footer/privacy-policy.html">Privacy Policy</a>
+                <a href="/footer/disclaimer.html">Disclaimer</a>
+                <a href="/footer/contact.html">Contact Us</a>
+            </div>
+
+            <p class="copyright">&copy; 2026 Futurelifetricks. All rights reserved. This site is not affiliated with,
+                endorsed by, or connected to any news organization.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
