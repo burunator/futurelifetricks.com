@@ -1507,19 +1507,21 @@
             Your 70% Discount &rarr;</a>
     </div> -->
 
+
+
     <script>
-        (function () {
-            var s = document.getElementById('sticky'), f = document.querySelector('.site-footer'), t = false;
-            function u() {
-                var y = window.scrollY || window.pageYOffset, h = document.body.scrollHeight - window.innerHeight;
-                var past = f.getBoundingClientRect().top < window.innerHeight;
-                if (y / h > 0.3 && !past) { s.classList.add('on'); } else { s.classList.remove('on'); }
-                t = false;
-            }
-            window.addEventListener('scroll', function () { if (!t) { window.requestAnimationFrame(u); t = true; } }, { passive: true });
-            u();
-        })();
+        function sendclicknb(event, url) {
+
+            if (!window.nbpix || !nbpix.process) return;
+
+            try { nbpix('event', 'click_button'); } catch (e) { }
+
+            event.preventDefault();
+            setTimeout(function () { window.location.href = url; }, 150);
+        }
     </script>
+
+
 </body>
 
 </html>
