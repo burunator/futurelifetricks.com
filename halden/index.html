@@ -780,64 +780,250 @@
         }
 
         /* ============================================================
-   DEFINITION GRID
+   INVESTMENT: TIMELINE
    ============================================================ */
-        .defs {
+        .tl {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            counter-reset: s
+        }
+
+        .tl li {
+            position: relative;
+            padding: 0 0 34px 48px;
+            counter-increment: s
+        }
+
+        .tl li:last-child {
+            padding-bottom: 0
+        }
+
+        .tl li::before {
+            content: "";
+            position: absolute;
+            left: 15px;
+            top: 38px;
+            bottom: 0;
+            width: 1px;
+            background: var(--stone);
+        }
+
+        .tl li:last-child::before {
+            display: none
+        }
+
+        .tl li::after {
+            content: counter(s);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 31px;
+            height: 31px;
+            border-radius: 50%;
+            border: 1px solid var(--stone-dark);
+            background: var(--paper);
+            display: grid;
+            place-items: center;
+            font-family: var(--f-mono);
+            font-size: .75rem;
+            color: var(--ink);
+        }
+
+        @media (min-width:880px) {
+            .tl {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 0 30px
+            }
+
+            .tl li {
+                padding: 54px 0 0 0
+            }
+
+            .tl li::before {
+                left: 45px;
+                right: -30px;
+                top: 15px;
+                bottom: auto;
+                width: auto;
+                height: 1px
+            }
+        }
+
+        .tl-t {
+            font-family: var(--f-display);
+            font-size: 1.28rem;
+            line-height: 1.2;
+            letter-spacing: -0.015em;
+            margin: 0 0 9px;
+        }
+
+        .tl-p {
+            font-size: .975rem;
+            line-height: 1.55;
+            color: var(--slate);
+            margin: 0;
+            max-width: 38ch
+        }
+
+        .chip {
+            display: inline-block;
+            margin-top: 14px;
+            padding: 7px 12px;
+            border: 1px solid var(--stone);
+            border-radius: 2px;
+            background: var(--white);
+            font-family: var(--f-mono);
+            font-size: .7rem;
+            letter-spacing: .09em;
+            text-transform: uppercase;
+            color: var(--flow);
+        }
+
+        .chip-strong {
+            background: var(--ink);
+            border-color: var(--ink);
+            color: var(--paper)
+        }
+
+        /* ============================================================
+   INVESTMENT: TERM CARDS
+   ============================================================ */
+        .terms {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1px;
+            background: var(--stone);
+            border: 1px solid var(--stone);
+            border-radius: var(--r);
+            overflow: hidden;
+            margin: 0;
+        }
+
+        @media (min-width:520px) {
+            .terms {
+                grid-template-columns: repeat(2, 1fr)
+            }
+        }
+
+        @media (min-width:900px) {
+            .terms {
+                grid-template-columns: repeat(3, 1fr)
+            }
+        }
+
+        .term {
+            background: var(--white);
+            padding: 24px 22px
+        }
+
+        .term dt {
+            font-family: var(--f-mono);
+            font-size: .688rem;
+            text-transform: uppercase;
+            letter-spacing: .14em;
+            color: var(--slate);
+            margin-bottom: 12px;
+        }
+
+        .term dd {
+            margin: 0;
+            font-family: var(--f-display);
+            font-size: 1.5rem;
+            line-height: 1.2;
+            letter-spacing: -0.018em;
+        }
+
+        .term dd small {
+            display: block;
+            margin-top: 8px;
+            font-family: var(--f-body);
+            font-size: .85rem;
+            line-height: 1.45;
+            letter-spacing: 0;
+            color: var(--slate);
+        }
+
+        /* ============================================================
+   INVESTMENT: OPEN QUESTIONS + CLOSING CTA
+   ============================================================ */
+        .twoq {
             display: grid;
             grid-template-columns: 1fr;
             gap: 0;
-            border-top: 1px solid var(--stone);
-            margin-top: 8px
+            border-top: 1px solid var(--stone)
         }
 
-        @media (min-width:700px) {
-            .defs {
+        @media (min-width:820px) {
+            .twoq {
                 grid-template-columns: 1fr 1fr;
                 column-gap: 56px
             }
         }
 
-        .def {
-            padding: 22px 0;
+        .twoq>div {
+            padding: 26px 0;
             border-bottom: 1px solid var(--stone)
         }
 
-        .def dt {
-            font-family: var(--f-mono);
-            font-size: .688rem;
-            text-transform: uppercase;
-            letter-spacing: .14em;
-            color: var(--flow);
-            margin-bottom: 10px;
+        .twoq h3 {
+            font-size: 1.22rem;
+            margin-bottom: 11px
         }
 
-        .def dd {
-            margin: 0;
-            font-family: var(--f-display);
-            font-size: 1.42rem;
-            line-height: 1.25;
-            letter-spacing: -0.015em;
-        }
-
-        .def dd small {
-            display: block;
-            font-family: var(--f-body);
-            font-size: .9rem;
+        .twoq p {
+            font-size: .975rem;
+            line-height: 1.6;
             color: var(--slate);
-            margin-top: 8px;
-            letter-spacing: 0;
-            line-height: 1.45
+            max-width: 46ch
         }
 
-        .note {
-            margin-top: 30px;
-            padding: 20px 22px;
-            background: var(--paper-2);
-            border-left: 2px solid var(--flow);
-            border-radius: 0 var(--r) var(--r) 0;
-            font-size: .95rem;
-            line-height: 1.55;
+        .closer {
+            border: 1px solid var(--stone);
+            border-radius: var(--r);
+            background: var(--white);
+            padding: 28px 24px;
+        }
+
+        @media (min-width:820px) {
+            .closer {
+                display: grid;
+                grid-template-columns: 1.25fr .75fr;
+                gap: 44px;
+                align-items: center;
+                padding: 38px 40px;
+            }
+        }
+
+        .closer h3 {
+            margin-bottom: 11px
+        }
+
+        .closer p {
+            font-size: .975rem;
+            line-height: 1.6;
             color: var(--slate);
+            max-width: 52ch
+        }
+
+        .closer-act {
+            margin-top: 22px
+        }
+
+        @media (min-width:820px) {
+            .closer-act {
+                margin-top: 0
+            }
+        }
+
+        .closer-act .btn {
+            width: 100%
+        }
+
+        .closer-act .cta-note {
+            text-align: left;
+            margin-top: 12px
         }
 
         /* ============================================================
@@ -1685,39 +1871,94 @@
                 </div>
                 <span class="eyebrow">Terms</span>
                 <h2 class="h2" style="max-width:20ch;margin-bottom:18px">How the investment works</h2>
-                <p class="lede" style="max-width:56ch;margin-bottom:38px">The main terms in plain language. The full
-                    documentation sets out the details.</p>
+                <p class="lede" style="max-width:52ch;margin-bottom:44px">The key steps and terms, from your investment
+                    to the operating plant.</p>
 
-                <dl class="defs">
-                    <div class="def">
+                <!-- Timeline -->
+                <ol class="tl">
+                    <li>
+                        <h3 class="tl-t">You invest</h3>
+                        <p class="tl-p">The smallest amount you can put in is &euro;500. Your money goes into the Halden
+                            Plant 4 site, not into Halden Hydro as a company.</p>
+                        <span class="chip">&euro;500 minimum</span>
+                    </li>
+                    <li>
+                        <h3 class="tl-t">Plant 4 is completed</h3>
+                        <p class="tl-p">The plant is being built now. Until it is finished and connected, it is a
+                            construction site and does not yet produce electricity. Commissioning is expected in Q3
+                            2027.</p>
+                        <span class="chip">Expected Q3 2027</span>
+                    </li>
+                    <li>
+                        <h3 class="tl-t">The plant starts operating</h3>
+                        <p class="tl-p">Once commissioned, Plant 4 produces electricity and sells it. Interest is paid
+                            once a year, starting from commissioning.</p>
+                        <span class="chip chip-strong">Interest from commissioning</span>
+                    </li>
+                    <li>
+                        <h3 class="tl-t">Five-year term</h3>
+                        <p class="tl-p">The investment runs for five years. The exact term start, repayment terms and
+                            maturity conditions are set out in the official investment documents.</p>
+                        <span class="chip">5-year term</span>
+                    </li>
+                </ol>
+
+                <!-- Key terms -->
+                <h3 class="h3" style="margin:var(--sect) 0 22px">Key terms at a glance</h3>
+                <dl class="terms">
+                    <div class="term">
                         <dt>Minimum investment</dt>
                         <dd>&euro;500</dd>
                     </div>
-                    <div class="def">
+                    <div class="term">
                         <dt>Projected return</dt>
-                        <dd>9.4% p.a.<small>A projection, not a guaranteed return.</small></dd>
+                        <dd>9.4% p.a.<small>Projected, not guaranteed.</small></dd>
                     </div>
-                    <div class="def">
-                        <dt>Term</dt>
-                        <dd>5 years</dd>
-                    </div>
-                    <div class="def">
+                    <div class="term">
                         <dt>Interest payments</dt>
-                        <dd>Paid annually<small>From commissioning of the plant.</small></dd>
+                        <dd>Annually<small>From commissioning.</small></dd>
                     </div>
-                    <div class="def">
+                    <div class="term">
                         <dt>Expected commissioning</dt>
                         <dd>Q3 2027</dd>
                     </div>
-                    <div class="def">
+                    <div class="term">
+                        <dt>Term</dt>
+                        <dd>5 years</dd>
+                    </div>
+                    <div class="term">
                         <dt>Use of funds</dt>
-                        <dd>The Halden project<small>Capital goes into this specific site.</small></dd>
+                        <dd>Halden Plant 4<small>This site, not the company.</small></dd>
                     </div>
                 </dl>
 
-                <p class="note">The full terms and conditions, the legal structure of the investment and the complete
-                    risk description are set out in the investment documentation included in the Investor Pack. Please
-                    read them before you decide.</p>
+                <!-- Two open questions -->
+                <div class="twoq" style="margin-top:var(--sect)">
+                    <div>
+                        <h3 class="h3">What if I need my money earlier?</h3>
+                        <p>This is a five-year investment, so you should not assume you can access your capital early.
+                            Any transfer or early-exit rights depend on the official investment terms. Review these
+                            before investing.</p>
+                    </div>
+                    <div>
+                        <h3 class="h3">What happens at the end of the five years?</h3>
+                        <p>The maturity and repayment terms are defined in the official investment documents. Review
+                            them carefully before making an investment decision.</p>
+                    </div>
+                </div>
+
+                <!-- Closing CTA -->
+                <div class="closer" style="margin-top:44px">
+                    <div>
+                        <h3 class="h3">Check the terms before you decide.</h3>
+                        <p>The Investor Pack includes the project documents, production assumptions and investment
+                            information you need to review the opportunity in detail.</p>
+                    </div>
+                    <div class="closer-act">
+                        <a class="btn btn-primary" href="#investor-pack">Get the Investor Pack</a>
+                        <p class="cta-note">Review the documents before making an investment decision.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
