@@ -1,0 +1,2161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Halden Hydro — Plant 4 | Run-of-river hydropower in Norway</title>
+    <meta name="description"
+        content="Halden Hydro operates three run-of-river hydropower plants in Norway and is raising capital for its fourth. Projected 9.4% p.a., €500 minimum, five-year term. Get the Investor Pack.">
+    <meta name="theme-color" content="#0F1E1A">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter+Tight:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&display=swap"
+        rel="stylesheet">
+    <style>
+        /* ============================================================
+   TOKENS
+   ============================================================ */
+        :root {
+            --ink: #0F1E1A;
+            --spruce: #16302A;
+            --pine: #234A40;
+            --paper: #F4F5F2;
+            --paper-2: #EBEDE8;
+            --stone: #DDE1DC;
+            --stone-dark: #2C4B42;
+            --slate: #5B6A64;
+            --slate-light: #A9BAB3;
+            --flow: #2F6B7A;
+            --flow-light: #9CC4CD;
+            --white: #FFFFFF;
+
+            --f-display: "Newsreader", Georgia, "Times New Roman", serif;
+            --f-body: "Inter Tight", "Helvetica Neue", Arial, sans-serif;
+            --f-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+
+            --gut: 20px;
+            --maxw: 1180px;
+            --r: 3px;
+            --sect: 64px;
+        }
+
+        @media (min-width:768px) {
+            :root {
+                --gut: 40px;
+                --sect: 96px;
+            }
+        }
+
+        @media (min-width:1100px) {
+            :root {
+                --gut: 56px;
+                --sect: 124px;
+            }
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box
+        }
+
+        html {
+            -webkit-text-size-adjust: 100%
+        }
+
+        body {
+            margin: 0;
+            background: var(--paper);
+            color: var(--ink);
+            font-family: var(--f-body);
+            font-size: 17px;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            display: block
+        }
+
+        a {
+            color: inherit
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            margin: 0;
+            font-weight: 400;
+            letter-spacing: -0.015em
+        }
+
+        p {
+            margin: 0 0 1em
+        }
+
+        p:last-child {
+            margin-bottom: 0
+        }
+
+        .wrap {
+            width: 100%;
+            max-width: var(--maxw);
+            margin: 0 auto;
+            padding-left: var(--gut);
+            padding-right: var(--gut)
+        }
+
+        .sect {
+            padding-top: var(--sect);
+            padding-bottom: var(--sect)
+        }
+
+        /* ---- type scale ---- */
+        .h1 {
+            font-family: var(--f-display);
+            font-weight: 400;
+            font-size: clamp(2.15rem, 7.4vw, 4.2rem);
+            line-height: 1.03;
+            letter-spacing: -0.028em
+        }
+
+        .h2 {
+            font-family: var(--f-display);
+            font-weight: 400;
+            font-size: clamp(1.75rem, 4.9vw, 3rem);
+            line-height: 1.08;
+            letter-spacing: -0.022em
+        }
+
+        .h3 {
+            font-family: var(--f-display);
+            font-weight: 400;
+            font-size: clamp(1.3rem, 3vw, 1.7rem);
+            line-height: 1.2
+        }
+
+        .lede {
+            font-size: clamp(1.05rem, 2.3vw, 1.28rem);
+            line-height: 1.55;
+            color: var(--slate)
+        }
+
+        .dark .lede {
+            color: var(--slate-light)
+        }
+
+        .body-lg {
+            font-size: 1.05rem;
+            line-height: 1.65
+        }
+
+        .muted {
+            color: var(--slate)
+        }
+
+        .dark .muted {
+            color: var(--slate-light)
+        }
+
+        .eyebrow {
+            font-family: var(--f-mono);
+            font-size: .688rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: .16em;
+            color: var(--flow);
+            margin: 0 0 18px;
+            display: block;
+        }
+
+        .dark .eyebrow {
+            color: var(--flow-light)
+        }
+
+        .dark {
+            background: var(--spruce);
+            color: var(--paper)
+        }
+
+        .dark h1,
+        .dark h2,
+        .dark h3 {
+            color: var(--paper)
+        }
+
+        /* ---- flow rule: recurring 22-tick motif ---- */
+        .flowrule {
+            display: flex;
+            align-items: flex-end;
+            gap: 4px;
+            height: 14px;
+            margin: 0 0 26px
+        }
+
+        .flowrule i {
+            display: block;
+            width: 3px;
+            background: var(--flow);
+            opacity: .5;
+            border-radius: 1px
+        }
+
+        .dark .flowrule i {
+            background: var(--flow-light);
+            opacity: .55
+        }
+
+        /* ============================================================
+   BUTTONS
+   ============================================================ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            min-height: 56px;
+            padding: 0 28px;
+            font-family: var(--f-body);
+            font-size: 1.0rem;
+            font-weight: 500;
+            letter-spacing: -0.005em;
+            border: 1px solid transparent;
+            border-radius: var(--r);
+            text-decoration: none;
+            cursor: pointer;
+            transition: background .18s ease, color .18s ease, border-color .18s ease, transform .18s ease;
+        }
+
+        .btn-primary {
+            background: var(--ink);
+            color: var(--paper);
+            border-color: var(--ink)
+        }
+
+        .btn-primary:hover {
+            background: var(--pine);
+            border-color: var(--pine)
+        }
+
+        .dark .btn-primary {
+            background: var(--paper);
+            color: var(--ink);
+            border-color: var(--paper)
+        }
+
+        .dark .btn-primary:hover {
+            background: var(--white);
+            border-color: var(--white)
+        }
+
+        .btn-ghost {
+            background: transparent;
+            color: var(--ink);
+            border-color: var(--stone-dark);
+            opacity: .9
+        }
+
+        .btn-ghost:hover {
+            border-color: var(--ink);
+            opacity: 1
+        }
+
+        .dark .btn-ghost {
+            color: var(--paper);
+            border-color: rgba(244, 245, 242, .34)
+        }
+
+        .dark .btn-ghost:hover {
+            border-color: rgba(244, 245, 242, .75);
+            background: rgba(244, 245, 242, .05)
+        }
+
+        .btn-sm {
+            min-height: 44px;
+            padding: 0 18px;
+            font-size: .9rem
+        }
+
+        .btn-block {
+            width: 100%
+        }
+
+        .cta-note {
+            font-family: var(--f-body);
+            font-size: .9rem;
+            line-height: 1.45;
+            color: var(--slate);
+            margin: 14px 0 0;
+            max-width: 44ch;
+        }
+
+        .dark .cta-note {
+            color: var(--slate-light)
+        }
+
+        .textlink {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            min-height: 44px;
+            font-size: 1rem;
+            text-decoration: none;
+            border-bottom: 1px solid currentColor;
+            padding-bottom: 1px;
+            transition: opacity .18s ease;
+        }
+
+        .textlink:hover {
+            opacity: .62
+        }
+
+        .textlink .arw {
+            transition: transform .18s ease
+        }
+
+        .textlink:hover .arw {
+            transform: translateX(3px)
+        }
+
+        :focus-visible {
+            outline: 2px solid var(--flow);
+            outline-offset: 3px;
+            border-radius: 2px
+        }
+
+        .dark :focus-visible {
+            outline-color: var(--flow-light)
+        }
+
+        /* ============================================================
+   HEADER
+   ============================================================ */
+        .hdr {
+            position: sticky;
+            top: 0;
+            z-index: 60;
+            background: rgba(15, 30, 26, .94);
+            backdrop-filter: saturate(140%) blur(8px);
+            border-bottom: 1px solid rgba(244, 245, 242, .1);
+        }
+
+        .hdr-in {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            height: 64px
+        }
+
+        @media (min-width:768px) {
+            .hdr-in {
+                height: 76px
+            }
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            text-decoration: none;
+            color: var(--paper)
+        }
+
+        .brand-mark {
+            width: 24px;
+            height: 24px;
+            flex: 0 0 24px
+        }
+
+        .brand-txt {
+            font-family: var(--f-mono);
+            font-size: .8rem;
+            font-weight: 500;
+            letter-spacing: .13em;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+
+        /* ============================================================
+   HERO
+   ============================================================ */
+        .hero {
+            background: var(--ink);
+            color: var(--paper);
+            position: relative;
+            overflow: hidden
+        }
+
+        .hero-in {
+            padding-top: 52px;
+            padding-bottom: 0
+        }
+
+        @media (min-width:960px) {
+            .hero-in {
+                display: grid;
+                grid-template-columns: 1.02fr .98fr;
+                gap: 64px;
+                align-items: center;
+                padding-top: 80px;
+                padding-bottom: 80px;
+            }
+        }
+
+        .hero h1 {
+            margin-bottom: 22px;
+            max-width: 16ch
+        }
+
+        .hero-sub {
+            max-width: 46ch;
+            color: rgba(244, 245, 242, .76);
+            font-size: clamp(1.02rem, 2.2vw, 1.16rem);
+            line-height: 1.55
+        }
+
+        .facts {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0;
+            margin: 34px 0 32px;
+            border-top: 1px solid rgba(244, 245, 242, .16);
+        }
+
+        @media (min-width:520px) {
+            .facts {
+                grid-template-columns: repeat(3, 1fr)
+            }
+        }
+
+        .fact {
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(244, 245, 242, .16);
+        }
+
+        @media (min-width:520px) {
+            .fact {
+                border-bottom: none;
+                padding: 18px 20px 18px 0
+            }
+
+            .fact+.fact {
+                border-left: 1px solid rgba(244, 245, 242, .16);
+                padding-left: 20px
+            }
+
+            .facts {
+                border-bottom: 1px solid rgba(244, 245, 242, .16)
+            }
+        }
+
+        .fact-v {
+            font-family: var(--f-display);
+            font-size: clamp(1.5rem, 4vw, 1.9rem);
+            line-height: 1;
+            letter-spacing: -0.02em;
+        }
+
+        .fact-l {
+            display: block;
+            margin-top: 8px;
+            font-family: var(--f-mono);
+            font-size: .688rem;
+            text-transform: uppercase;
+            letter-spacing: .14em;
+            color: var(--flow-light);
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center
+        }
+
+        .hero-actions .btn {
+            flex: 1 1 auto;
+            min-width: 220px
+        }
+
+        @media (min-width:520px) {
+            .hero-actions .btn {
+                flex: 0 0 auto
+            }
+        }
+
+        .hero-fig {
+            position: relative;
+            margin: 44px calc(var(--gut)*-1) 0;
+            aspect-ratio: 4/3;
+            background: linear-gradient(150deg, #1B3B33 0%, #0C1815 100%);
+        }
+
+        @media (min-width:960px) {
+            .hero-fig {
+                margin: 0;
+                aspect-ratio: 4/4.4;
+                border-radius: var(--r);
+                overflow: hidden
+            }
+        }
+
+        .hero-fig img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
+
+        .figcap {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 20px var(--gut);
+            background: linear-gradient(to top, rgba(15, 30, 26, .86), rgba(15, 30, 26, 0));
+            font-family: var(--f-mono);
+            font-size: .688rem;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: rgba(244, 245, 242, .82);
+        }
+
+        @media (min-width:960px) {
+            .figcap {
+                padding: 20px 22px
+            }
+        }
+
+        /* ============================================================
+   PROOF STRIP
+   ============================================================ */
+        .proof {
+            background: var(--paper-2);
+            border-bottom: 1px solid var(--stone)
+        }
+
+        .proof-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0;
+            padding: 0
+        }
+
+        @media (min-width:860px) {
+            .proof-grid {
+                grid-template-columns: repeat(4, 1fr)
+            }
+        }
+
+        .proof-i {
+            padding: 26px 16px 26px 0;
+            border-bottom: 1px solid var(--stone)
+        }
+
+        .proof-i:nth-child(odd) {
+            padding-right: 16px
+        }
+
+        .proof-i:nth-child(even) {
+            padding-left: 20px;
+            border-left: 1px solid var(--stone)
+        }
+
+        @media (min-width:860px) {
+            .proof-i {
+                border-bottom: none;
+                padding: 34px 20px 34px 0
+            }
+
+            .proof-i:nth-child(even) {
+                padding-left: 0;
+                border-left: none
+            }
+
+            .proof-i+.proof-i {
+                border-left: 1px solid var(--stone);
+                padding-left: 24px
+            }
+        }
+
+        .proof-v {
+            font-family: var(--f-display);
+            font-size: clamp(1.85rem, 5.2vw, 2.6rem);
+            line-height: 1;
+            letter-spacing: -0.025em
+        }
+
+        .proof-l {
+            display: block;
+            margin-top: 9px;
+            font-size: .875rem;
+            color: var(--slate);
+            line-height: 1.35
+        }
+
+        /* ============================================================
+   GENERIC SPLIT
+   ============================================================ */
+        .split {
+            display: grid;
+            gap: 36px;
+            align-items: center
+        }
+
+        @media (min-width:900px) {
+            .split {
+                grid-template-columns: 1fr 1fr;
+                gap: 70px
+            }
+        }
+
+        .split.rev .split-fig {
+            order: -1
+        }
+
+        @media (max-width:899px) {
+            .split.rev .split-fig {
+                order: 0
+            }
+        }
+
+        .split-fig {
+            position: relative;
+            aspect-ratio: 4/3;
+            overflow: hidden;
+            border-radius: var(--r);
+            background: linear-gradient(150deg, #27544A 0%, #12261F 100%);
+        }
+
+        .split-fig img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover
+        }
+
+        .split-body h2 {
+            margin-bottom: 20px
+        }
+
+        /* ---- signed statement ---- */
+        .sig {
+            margin-top: 30px;
+            padding-top: 22px;
+            border-top: 1px solid var(--stone);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .dark .sig {
+            border-top-color: rgba(244, 245, 242, .18)
+        }
+
+        .sig-mark {
+            width: 42px;
+            height: 42px;
+            flex: 0 0 42px;
+            border-radius: 50%;
+            border: 1px solid var(--stone-dark);
+            display: grid;
+            place-items: center;
+            font-family: var(--f-display);
+            font-size: .95rem;
+            color: var(--ink);
+        }
+
+        .dark .sig-mark {
+            border-color: rgba(244, 245, 242, .35);
+            color: var(--paper)
+        }
+
+        .sig-t {
+            font-size: .925rem;
+            line-height: 1.4
+        }
+
+        .sig-t b {
+            font-weight: 500;
+            display: block
+        }
+
+        .sig-t span {
+            color: var(--slate)
+        }
+
+        .dark .sig-t span {
+            color: var(--slate-light)
+        }
+
+        /* ============================================================
+   PLANT 4 — status + progress
+   ============================================================ */
+        .status {
+            list-style: none;
+            margin: 26px 0 0;
+            padding: 0;
+            border-top: 1px solid rgba(244, 245, 242, .16)
+        }
+
+        .status li {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 14px;
+            align-items: start;
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(244, 245, 242, .16);
+        }
+
+        .tick {
+            width: 18px;
+            height: 18px;
+            margin-top: 3px;
+            flex: 0 0 18px
+        }
+
+        .status b {
+            font-weight: 500;
+            display: block;
+            margin-bottom: 2px
+        }
+
+        .status span {
+            color: var(--slate-light);
+            font-size: .95rem;
+            line-height: 1.45
+        }
+
+        .raise {
+            margin-top: 34px
+        }
+
+        .raise-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 12px
+        }
+
+        .raise-v {
+            font-family: var(--f-display);
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            line-height: 1;
+            letter-spacing: -0.02em
+        }
+
+        .raise-of {
+            font-family: var(--f-mono);
+            font-size: .75rem;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: var(--flow-light)
+        }
+
+        .meter {
+            height: 6px;
+            background: rgba(244, 245, 242, .16);
+            border-radius: 99px;
+            overflow: hidden
+        }
+
+        .meter i {
+            display: block;
+            height: 100%;
+            width: 38%;
+            background: var(--flow-light);
+            border-radius: 99px
+        }
+
+        .raise-foot {
+            margin-top: 12px;
+            font-size: .9rem;
+            color: var(--slate-light)
+        }
+
+        /* ============================================================
+   DEFINITION GRID
+   ============================================================ */
+        .defs {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0;
+            border-top: 1px solid var(--stone);
+            margin-top: 8px
+        }
+
+        @media (min-width:700px) {
+            .defs {
+                grid-template-columns: 1fr 1fr;
+                column-gap: 56px
+            }
+        }
+
+        .def {
+            padding: 22px 0;
+            border-bottom: 1px solid var(--stone)
+        }
+
+        .def dt {
+            font-family: var(--f-mono);
+            font-size: .688rem;
+            text-transform: uppercase;
+            letter-spacing: .14em;
+            color: var(--flow);
+            margin-bottom: 10px;
+        }
+
+        .def dd {
+            margin: 0;
+            font-family: var(--f-display);
+            font-size: 1.42rem;
+            line-height: 1.25;
+            letter-spacing: -0.015em;
+        }
+
+        .def dd small {
+            display: block;
+            font-family: var(--f-body);
+            font-size: .9rem;
+            color: var(--slate);
+            margin-top: 8px;
+            letter-spacing: 0;
+            line-height: 1.45
+        }
+
+        .note {
+            margin-top: 30px;
+            padding: 20px 22px;
+            background: var(--paper-2);
+            border-left: 2px solid var(--flow);
+            border-radius: 0 var(--r) var(--r) 0;
+            font-size: .95rem;
+            line-height: 1.55;
+            color: var(--slate);
+        }
+
+        /* ============================================================
+   RETURN BAND
+   ============================================================ */
+        .ret {
+            background: var(--pine);
+            color: var(--paper)
+        }
+
+        .ret-grid {
+            display: grid;
+            gap: 34px
+        }
+
+        @media (min-width:900px) {
+            .ret-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 70px;
+                align-items: start
+            }
+        }
+
+        .ret .h2 {
+            max-width: 15ch
+        }
+
+        .ret-points {
+            list-style: none;
+            margin: 26px 0 0;
+            padding: 0
+        }
+
+        .ret-points li {
+            padding: 14px 0 14px 26px;
+            position: relative;
+            border-top: 1px solid rgba(244, 245, 242, .16);
+            font-size: .975rem;
+            line-height: 1.5;
+            color: rgba(244, 245, 242, .84);
+        }
+
+        .ret-points li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 22px;
+            width: 12px;
+            height: 1px;
+            background: var(--flow-light);
+        }
+
+        /* ============================================================
+   HYDROLOGY + SIGNATURE CHART
+   ============================================================ */
+        .hyd-grid {
+            display: grid;
+            gap: 40px
+        }
+
+        @media (min-width:960px) {
+            .hyd-grid {
+                grid-template-columns: .95fr 1.05fr;
+                gap: 70px;
+                align-items: center
+            }
+        }
+
+        .chart {
+            border: 1px solid var(--stone);
+            border-radius: var(--r);
+            background: var(--white);
+            padding: 22px 20px 18px;
+        }
+
+        .chart-hd {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 12px;
+            flex-wrap: wrap;
+            font-family: var(--f-mono);
+            font-size: .688rem;
+            text-transform: uppercase;
+            letter-spacing: .13em;
+            color: var(--slate);
+            margin-bottom: 20px;
+        }
+
+        .bars {
+            display: flex;
+            align-items: flex-end;
+            gap: 2.2%;
+            height: 132px;
+            position: relative
+        }
+
+        @media (min-width:600px) {
+            .bars {
+                height: 168px
+            }
+        }
+
+        .bars .mean {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 38%;
+            height: 1px;
+            background: var(--flow);
+            opacity: .42;
+        }
+
+        .bars i {
+            flex: 1 1 0;
+            background: var(--stone-dark);
+            opacity: .28;
+            border-radius: 1px 1px 0 0;
+            transition: opacity .2s ease;
+        }
+
+        .bars i:hover {
+            opacity: .55
+        }
+
+        .chart-ax {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            font-family: var(--f-mono);
+            font-size: .688rem;
+            letter-spacing: .1em;
+            color: var(--slate);
+        }
+
+        .chart-cap {
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px solid var(--stone);
+            font-size: .85rem;
+            line-height: 1.5;
+            color: var(--slate);
+        }
+
+        .pull {
+            margin-top: 30px;
+            padding-left: 20px;
+            border-left: 2px solid var(--flow);
+            font-family: var(--f-display);
+            font-style: italic;
+            font-weight: 300;
+            font-size: clamp(1.12rem, 2.6vw, 1.42rem);
+            line-height: 1.35;
+            color: var(--ink);
+        }
+
+        /* ============================================================
+   QUESTIONS
+   ============================================================ */
+        .qs {
+            border-top: 1px solid var(--stone);
+            margin-top: 8px
+        }
+
+        .q {
+            border-bottom: 1px solid var(--stone)
+        }
+
+        .q-btn {
+            width: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+            background: none;
+            border: 0;
+            padding: 22px 0;
+            text-align: left;
+            cursor: pointer;
+            font-family: var(--f-display);
+            font-size: clamp(1.08rem, 2.6vw, 1.3rem);
+            line-height: 1.3;
+            letter-spacing: -0.015em;
+            color: var(--ink);
+        }
+
+        .q-ico {
+            flex: 0 0 20px;
+            width: 20px;
+            height: 20px;
+            margin-top: 5px;
+            position: relative;
+        }
+
+        .q-ico::before,
+        .q-ico::after {
+            content: "";
+            position: absolute;
+            background: var(--flow);
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .q-ico::before {
+            width: 14px;
+            height: 1.5px
+        }
+
+        .q-ico::after {
+            width: 1.5px;
+            height: 14px;
+            transition: transform .22s ease, opacity .22s ease
+        }
+
+        .q[data-open="true"] .q-ico::after {
+            transform: translate(-50%, -50%) scaleY(0);
+            opacity: 0
+        }
+
+        .q-panel {
+            overflow: hidden;
+            height: 0;
+            transition: height .26s ease
+        }
+
+        .q-panel-in {
+            padding: 0 0 24px;
+            max-width: 62ch;
+            color: var(--slate);
+            font-size: 1rem;
+            line-height: 1.62
+        }
+
+        /* ============================================================
+   DOCUMENTS
+   ============================================================ */
+        .docs {
+            background: var(--ink);
+            color: var(--paper)
+        }
+
+        .docs-grid {
+            display: grid;
+            gap: 40px
+        }
+
+        @media (min-width:960px) {
+            .docs-grid {
+                grid-template-columns: .9fr 1.1fr;
+                gap: 70px;
+                align-items: start
+            }
+        }
+
+        .doclist {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            border-top: 1px solid rgba(244, 245, 242, .16)
+        }
+
+        .doclist li {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 16px;
+            align-items: start;
+            padding: 18px 0;
+            border-bottom: 1px solid rgba(244, 245, 242, .16);
+        }
+
+        .doc-ico {
+            width: 20px;
+            height: 24px;
+            margin-top: 2px;
+            flex: 0 0 20px;
+            opacity: .75
+        }
+
+        .doclist b {
+            font-weight: 500;
+            display: block;
+            margin-bottom: 3px;
+            font-size: 1.02rem
+        }
+
+        .doclist span {
+            color: var(--slate-light);
+            font-size: .925rem;
+            line-height: 1.45
+        }
+
+        /* ============================================================
+   FORM
+   ============================================================ */
+        .form-wrap {
+            display: grid;
+            gap: 40px
+        }
+
+        @media (min-width:960px) {
+            .form-wrap {
+                grid-template-columns: 1fr 1fr;
+                gap: 70px;
+                align-items: start
+            }
+        }
+
+        .form-card {
+            background: var(--white);
+            border: 1px solid var(--stone);
+            border-radius: var(--r);
+            padding: 26px 22px;
+        }
+
+        @media (min-width:600px) {
+            .form-card {
+                padding: 34px 32px
+            }
+        }
+
+        .field {
+            margin-bottom: 16px
+        }
+
+        .row2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px
+        }
+
+        @media (min-width:560px) {
+            .row2 {
+                grid-template-columns: 1fr 1fr
+            }
+        }
+
+        label {
+            display: block;
+            font-family: var(--f-mono);
+            font-size: .688rem;
+            text-transform: uppercase;
+            letter-spacing: .13em;
+            color: var(--slate);
+            margin-bottom: 8px;
+        }
+
+        label .opt {
+            text-transform: none;
+            letter-spacing: 0;
+            font-family: var(--f-body);
+            color: var(--slate)
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=tel] {
+            width: 100%;
+            min-height: 54px;
+            padding: 12px 14px;
+            font-family: var(--f-body);
+            font-size: 1rem;
+            color: var(--ink);
+            background: var(--paper);
+            border: 1px solid var(--stone);
+            border-radius: var(--r);
+            transition: border-color .18s ease, background .18s ease;
+        }
+
+        input:hover {
+            border-color: #C6CCC5
+        }
+
+        input:focus {
+            background: var(--white);
+            border-color: var(--flow);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(47, 107, 122, .14)
+        }
+
+        input[aria-invalid=true] {
+            border-color: #9B4034;
+            background: #FBF3F2
+        }
+
+        .err {
+            display: none;
+            margin-top: 7px;
+            font-size: .85rem;
+            color: #9B4034
+        }
+
+        input[aria-invalid=true]~.err {
+            display: block
+        }
+
+        .consent {
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+            margin: 20px 0 22px
+        }
+
+        .consent input {
+            appearance: none;
+            -webkit-appearance: none;
+            width: 22px;
+            height: 22px;
+            flex: 0 0 22px;
+            margin: 1px 0 0;
+            border: 1px solid var(--stone);
+            border-radius: 2px;
+            background: var(--paper);
+            cursor: pointer;
+            position: relative;
+            transition: background .16s ease, border-color .16s ease;
+        }
+
+        .consent input:checked {
+            background: var(--ink);
+            border-color: var(--ink)
+        }
+
+        .consent input:checked::after {
+            content: "";
+            position: absolute;
+            left: 7px;
+            top: 3px;
+            width: 5px;
+            height: 10px;
+            border: solid var(--paper);
+            border-width: 0 1.5px 1.5px 0;
+            transform: rotate(43deg);
+        }
+
+        .consent label {
+            font-family: var(--f-body);
+            text-transform: none;
+            letter-spacing: 0;
+            font-size: .875rem;
+            line-height: 1.5;
+            color: var(--slate);
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .form-foot {
+            margin-top: 14px;
+            font-size: .8rem;
+            line-height: 1.5;
+            color: var(--slate);
+            text-align: center
+        }
+
+        .gets {
+            list-style: none;
+            margin: 24px 0 0;
+            padding: 0;
+            border-top: 1px solid var(--stone)
+        }
+
+        .gets li {
+            padding: 14px 0 14px 26px;
+            position: relative;
+            border-bottom: 1px solid var(--stone);
+            font-size: .975rem;
+            line-height: 1.45;
+        }
+
+        .gets li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 22px;
+            width: 12px;
+            height: 1px;
+            background: var(--flow)
+        }
+
+        /* ---- success state ---- */
+        .done {
+            display: none;
+            text-align: left
+        }
+
+        .done.on {
+            display: block;
+            animation: fade .4s ease
+        }
+
+        @keyframes fade {
+            from {
+                opacity: 0;
+                transform: translateY(6px)
+            }
+
+            to {
+                opacity: 1;
+                transform: none
+            }
+        }
+
+        .done-mark {
+            width: 46px;
+            height: 46px;
+            margin-bottom: 22px
+        }
+
+        .done h3 {
+            margin-bottom: 12px
+        }
+
+        .done-actions {
+            display: grid;
+            gap: 10px;
+            margin-top: 26px
+        }
+
+        .done-actions .btn {
+            width: 100%
+        }
+
+        .done-sec {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px
+        }
+
+        .done-sec .btn {
+            width: auto;
+            flex: 1 1 190px
+        }
+
+        /* ============================================================
+   FOOTER
+   ============================================================ */
+        .ftr {
+            background: var(--spruce);
+            color: var(--slate-light);
+            padding: 56px 0 120px;
+            font-size: .9rem
+        }
+
+        @media (min-width:900px) {
+            .ftr {
+                padding: 64px 0 56px
+            }
+        }
+
+        .ftr-top {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 28px;
+            border-bottom: 1px solid rgba(244, 245, 242, .14);
+        }
+
+        .ftr-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px
+        }
+
+        .ftr-links a {
+            text-decoration: none;
+            transition: color .18s ease
+        }
+
+        .ftr-links a:hover {
+            color: var(--paper)
+        }
+
+        .risk {
+            margin-top: 28px;
+            max-width: 78ch;
+            font-size: .85rem;
+            line-height: 1.62;
+            color: rgba(169, 186, 179, .9);
+        }
+
+        .risk b {
+            color: var(--paper);
+            font-weight: 500
+        }
+
+        .ftr-btm {
+            margin-top: 28px;
+            padding-top: 22px;
+            border-top: 1px solid rgba(244, 245, 242, .14);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            justify-content: space-between;
+            font-family: var(--f-mono);
+            font-size: .688rem;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+        }
+
+        /* ============================================================
+   STICKY MOBILE CTA
+   ============================================================ */
+        .sticky {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 70;
+            padding: 10px var(--gut) calc(10px + env(safe-area-inset-bottom));
+            background: rgba(15, 30, 26, .96);
+            backdrop-filter: saturate(140%) blur(8px);
+            border-top: 1px solid rgba(244, 245, 242, .12);
+            transform: translateY(120%);
+            transition: transform .3s ease;
+        }
+
+        .sticky.on {
+            transform: none
+        }
+
+        .sticky .btn {
+            width: 100%;
+            background: var(--paper);
+            color: var(--ink);
+            border-color: var(--paper)
+        }
+
+        @media (min-width:900px) {
+            .sticky {
+                display: none
+            }
+        }
+
+        @media (prefers-reduced-motion:reduce) {
+
+            *,
+            *::before,
+            *::after {
+                animation-duration: .001ms !important;
+                transition-duration: .001ms !important
+            }
+
+            html {
+                scroll-behavior: auto
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 88px
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="hdr dark">
+        <div class="wrap hdr-in">
+            <a class="brand" href="#top" aria-label="Halden Hydro, home">
+                <svg class="brand-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M2 15.2c2.4-2.6 4.8-2.6 7.2 0s4.8 2.6 7.2 0 4.8-2.6 5.6 0" stroke="#9CC4CD"
+                        stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M2 20c2.4-2.6 4.8-2.6 7.2 0s4.8 2.6 7.2 0 4.8-2.6 5.6 0" stroke="#9CC4CD"
+                        stroke-width="1.5" stroke-linecap="round" opacity=".5" />
+                    <path d="M6.5 10.4V3.6h11v6.8" stroke="#F4F5F2" stroke-width="1.5" stroke-linejoin="round" />
+                    <path d="M12 3.6v6.8" stroke="#F4F5F2" stroke-width="1.5" />
+                </svg>
+                <span class="brand-txt">Halden Hydro</span>
+            </a>
+            <a class="btn btn-primary btn-sm" href="#investor-pack">Investor Pack</a>
+        </div>
+    </header>
+
+    <main id="top">
+
+        <!-- ===================== HERO ===================== -->
+        <section class="hero dark">
+            <div class="wrap hero-in">
+                <div>
+                    <span class="eyebrow">Plant 4 · Norway · Now raising</span>
+                    <h1 class="h1">This isn&rsquo;t plant number one. It&rsquo;s plant number four.</h1>
+                    <p class="hero-sub">Halden Hydro has built and operated small run-of-river hydropower plants in
+                        Norway since 2014. Three are running today. We are now raising capital for the fourth.</p>
+
+                    <div class="facts">
+                        <div class="fact">
+                            <div class="fact-v">9.4% p.a.</div>
+                            <span class="fact-l">Projected return</span>
+                        </div>
+                        <div class="fact">
+                            <div class="fact-v">&euro;500</div>
+                            <span class="fact-l">Minimum investment</span>
+                        </div>
+                        <div class="fact">
+                            <div class="fact-v">5 years</div>
+                            <span class="fact-l">Term</span>
+                        </div>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#investor-pack">Get the Investor Pack</a>
+                        <a class="btn btn-ghost" href="#project">See the project</a>
+                    </div>
+                    <p class="cta-note">Project details, production assumptions and supporting documents.</p>
+                </div>
+
+                <figure class="hero-fig">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Askerudfoss%20kraftstasjon.JPG?width=1400"
+                        alt="A small run-of-river hydropower station on a Norwegian river" loading="eager"
+                        fetchpriority="high" decoding="async" onerror="this.style.display='none'">
+                    <figcaption class="figcap">Run-of-river generation &mdash; Halden Hydro, Norway</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- ===================== PROOF STRIP ===================== -->
+        <section class="proof">
+            <div class="wrap">
+                <div class="proof-grid">
+                    <div class="proof-i">
+                        <div class="proof-v">3</div>
+                        <span class="proof-l">Plants already in operation</span>
+                    </div>
+                    <div class="proof-i">
+                        <div class="proof-v">11+ years</div>
+                        <span class="proof-l">Operating since 2014</span>
+                    </div>
+                    <div class="proof-i">
+                        <div class="proof-v">340</div>
+                        <span class="proof-l">Investors so far</span>
+                    </div>
+                    <div class="proof-i">
+                        <div class="proof-v">&euro;1.6m</div>
+                        <span class="proof-l">Already committed to Plant 4</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== FOUNDER / TRACK RECORD ===================== -->
+        <section class="sect" id="track-record">
+            <div class="wrap split">
+                <figure class="split-fig">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/And%C3%A5sfossen%20kraftverk.jpg?width=1200"
+                        alt="An operating Halden Hydro run-of-river plant beside the river it generates from"
+                        loading="lazy" decoding="async" onerror="this.style.display='none'">
+                </figure>
+                <div class="split-body">
+                    <span class="eyebrow">Track record</span>
+                    <h2 class="h2">Twelve years in hydropower before founding Halden Hydro.</h2>
+                    <p class="lede">Ove Halden is an engineer. He spent twelve years at the regional utility working on
+                        hydropower before he started the company in 2014.</p>
+                    <p>Halden Hydro develops and operates small run-of-river plants in Norway. Three of them are in
+                        operation today. Plant 4 is the fourth project of the same kind, on the same model of working:
+                        build it, connect it, run it.</p>
+                    <p>The company is not a fund and not a marketing business. It builds plants and it operates them.
+                    </p>
+
+                    <div class="sig">
+                        <div class="sig-mark" aria-hidden="true">OH</div>
+                        <div class="sig-t">
+                            <b>Ove Halden</b>
+                            <span>Founder and engineer, Halden Hydro</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== PLANT 4 ===================== -->
+        <section class="sect dark" id="project">
+            <div class="wrap split rev">
+                <div class="split-body">
+                    <span class="eyebrow">The project</span>
+                    <h2 class="h2">Plant 4 is already underway.</h2>
+                    <p class="lede">This is not a plan on paper. Construction on the Halden site has already started.
+                    </p>
+
+                    <ul class="status">
+                        <li>
+                            <svg class="tick" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                                <circle cx="9" cy="9" r="8" stroke="#9CC4CD" stroke-width="1.3" />
+                                <path d="M5.2 9.2l2.5 2.5 5.1-5.4" stroke="#9CC4CD" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                            <div><b>Construction has started</b><span>Work is underway on site now.</span></div>
+                        </li>
+                        <li>
+                            <svg class="tick" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                                <circle cx="9" cy="9" r="8" stroke="#9CC4CD" stroke-width="1.3" />
+                                <path d="M9 4.6V9l2.9 1.8" stroke="#9CC4CD" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <div><b>Commissioning expected Q3 2027</b><span>Interest is paid annually from
+                                    commissioning.</span></div>
+                        </li>
+                        <li>
+                            <svg class="tick" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                                <circle cx="9" cy="9" r="8" stroke="#9CC4CD" stroke-width="1.3" />
+                                <path d="M9 5.2v7.6M5.6 8.2h6.8" stroke="#9CC4CD" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                            <div><b>Capital goes into this site</b><span>Money raised in this round is for the Halden
+                                    project specifically, not for the company as a whole.</span></div>
+                        </li>
+                    </ul>
+
+                    <div class="raise">
+                        <div class="raise-top">
+                            <div class="raise-v">&euro;1.6m committed</div>
+                            <div class="raise-of">of a &euro;4.2m target</div>
+                        </div>
+                        <div class="meter" role="img"
+                            aria-label="1.6 million euro committed of a 4.2 million euro target"><i></i></div>
+                        <p class="raise-foot">340 people have invested so far. Minimum investment is &euro;500.</p>
+                    </div>
+
+                    <div class="hero-actions" style="margin-top:34px">
+                        <a class="btn btn-primary" href="#investor-pack">Get the Investor Pack</a>
+                    </div>
+                    <p class="cta-note">Project details, production assumptions and supporting documents.</p>
+                </div>
+
+                <figure class="split-fig">
+                    <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Cushman%20Generating%20Station%20and%20Penstocks.jpg?width=1200"
+                        alt="Penstock pipework running down to a hydropower station, of the type being installed at Plant 4"
+                        loading="lazy" decoding="async" onerror="this.style.display='none'">
+                    <figcaption class="figcap">Plant 4 &mdash; penstock and powerhouse works</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- ===================== HOW THE INVESTMENT WORKS ===================== -->
+        <section class="sect">
+            <div class="wrap">
+                <div class="flowrule" aria-hidden="true">
+                    <i style="height:40%"></i><i style="height:70%"></i><i style="height:55%"></i><i
+                        style="height:100%"></i><i style="height:62%"></i><i style="height:35%"></i><i
+                        style="height:80%"></i><i style="height:48%"></i><i style="height:66%"></i><i
+                        style="height:90%"></i><i style="height:44%"></i><i style="height:58%"></i>
+                </div>
+                <span class="eyebrow">Terms</span>
+                <h2 class="h2" style="max-width:20ch;margin-bottom:18px">How the investment works</h2>
+                <p class="lede" style="max-width:56ch;margin-bottom:38px">The main terms in plain language. The full
+                    documentation sets out the details.</p>
+
+                <dl class="defs">
+                    <div class="def">
+                        <dt>Minimum investment</dt>
+                        <dd>&euro;500</dd>
+                    </div>
+                    <div class="def">
+                        <dt>Projected return</dt>
+                        <dd>9.4% p.a.<small>A projection, not a guaranteed return.</small></dd>
+                    </div>
+                    <div class="def">
+                        <dt>Term</dt>
+                        <dd>5 years</dd>
+                    </div>
+                    <div class="def">
+                        <dt>Interest payments</dt>
+                        <dd>Paid annually<small>From commissioning of the plant.</small></dd>
+                    </div>
+                    <div class="def">
+                        <dt>Expected commissioning</dt>
+                        <dd>Q3 2027</dd>
+                    </div>
+                    <div class="def">
+                        <dt>Use of funds</dt>
+                        <dd>The Halden project<small>Capital goes into this specific site.</small></dd>
+                    </div>
+                </dl>
+
+                <p class="note">The full terms and conditions, the legal structure of the investment and the complete
+                    risk description are set out in the investment documentation included in the Investor Pack. Please
+                    read them before you decide.</p>
+            </div>
+        </section>
+
+        <!-- ===================== RETURN ===================== -->
+        <section class="sect ret dark">
+            <div class="wrap ret-grid">
+                <div>
+                    <span class="eyebrow">The return</span>
+                    <h2 class="h2">A projected 9.4% p.a. &mdash; based on a real operating model.</h2>
+                </div>
+                <div>
+                    <p class="lede" style="margin-bottom:18px">The 9.4% figure is a projection. It is not a guarantee,
+                        and it is not a promise of what any single year will pay.</p>
+                    <p style="color:rgba(244,245,242,.84)">It comes out of a production model built for this site: how
+                        much electricity the plant is expected to generate, the assumptions behind that figure, and
+                        commissioning in Q3 2027. If those assumptions turn out differently, the return turns out
+                        differently.</p>
+                    <ul class="ret-points">
+                        <li>Expected electricity production from the Halden site</li>
+                        <li>Project assumptions used in the production model</li>
+                        <li>Measured river flow, which varies from year to year</li>
+                        <li>Commissioning expected in Q3 2027, with interest paid annually from then</li>
+                    </ul>
+                    <div style="margin-top:32px">
+                        <a class="btn btn-primary" href="#investor-pack">Review the assumptions</a>
+                    </div>
+                    <p class="cta-note">The production model and the assumptions behind it are in the Investor Pack.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== HYDROLOGY ===================== -->
+        <section class="sect">
+            <div class="wrap hyd-grid">
+                <div>
+                    <span class="eyebrow">Water</span>
+                    <h2 class="h2" style="margin-bottom:20px">What happens in a dry year?</h2>
+                    <p class="lede">A run-of-river plant generates from the water flowing past it. Some years carry more
+                        water than others. Production varies with it.</p>
+                    <p>The production model for this site is built on 22 years of measured river-flow data. That does
+                        not remove the variation, and we would not claim it does. What it does is show where the
+                        forecast comes from.</p>
+                    <p>The full flow series and the assumptions applied to it are in the Investor Pack, so you can check
+                        the model yourself rather than take a number on trust.</p>
+                    <p class="pull">The point isn&rsquo;t to pretend every year will look the same. It&rsquo;s to show
+                        what the forecast is based on.</p>
+                </div>
+
+                <figure class="chart" style="margin:0">
+                    <div class="chart-hd">
+                        <span>Measured river flow &middot; 22 years</span>
+                        <span>Annual variation</span>
+                    </div>
+                    <div class="bars" aria-hidden="true">
+                        <span class="mean"></span>
+                        <i style="height:58%"></i><i style="height:74%"></i><i style="height:46%"></i><i
+                            style="height:83%"></i>
+                        <i style="height:62%"></i><i style="height:39%"></i><i style="height:71%"></i><i
+                            style="height:88%"></i>
+                        <i style="height:54%"></i><i style="height:66%"></i><i style="height:35%"></i><i
+                            style="height:79%"></i>
+                        <i style="height:69%"></i><i style="height:92%"></i><i style="height:51%"></i><i
+                            style="height:64%"></i>
+                        <i style="height:43%"></i><i style="height:76%"></i><i style="height:59%"></i><i
+                            style="height:85%"></i>
+                        <i style="height:48%"></i><i style="height:70%"></i>
+                    </div>
+                    <div class="chart-ax"><span>2003</span><span>2024</span></div>
+                    <figcaption class="chart-cap">Shape of annual variation across the measured record, with the
+                        long-run average marked. The complete measured series, in full detail, forms part of the
+                        production model in the Investor Pack.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- ===================== QUESTIONS ===================== -->
+        <section class="sect" id="questions"
+            style="background:var(--paper-2);border-top:1px solid var(--stone);border-bottom:1px solid var(--stone)">
+            <div class="wrap">
+                <span class="eyebrow">Before you invest</span>
+                <h2 class="h2" style="max-width:22ch;margin-bottom:18px">Questions worth asking before you invest</h2>
+                <p class="lede" style="max-width:54ch;margin-bottom:34px">Most people ask us two or three of these. Here
+                    are the short answers.</p>
+
+                <div class="qs">
+                    <div class="q" data-open="false">
+                        <h3><button class="q-btn" aria-expanded="false"><span>How far along is Plant 4?</span><span
+                                    class="q-ico" aria-hidden="true"></span></button></h3>
+                        <div class="q-panel">
+                            <div class="q-panel-in">
+                                <p>Construction has already started on the site. Commissioning is expected in Q3 2027,
+                                    and interest is paid annually from commissioning. This is the fourth plant Halden
+                                    Hydro has built; three are already in operation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="q" data-open="false">
+                        <h3><button class="q-btn" aria-expanded="false"><span>What happens if river flow is lower than
+                                    expected?</span><span class="q-ico" aria-hidden="true"></span></button></h3>
+                        <div class="q-panel">
+                            <div class="q-panel-in">
+                                <p>Production would be lower, and the return would be affected. Run-of-river output
+                                    follows the water. The production model is built on 22 years of measured flow at
+                                    this site, which is why the projection is a projection and not a guarantee. The
+                                    model and its assumptions are in the Investor Pack.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="q" data-open="false">
+                        <h3><button class="q-btn" aria-expanded="false"><span>Who is behind Halden Hydro?</span><span
+                                    class="q-ico" aria-hidden="true"></span></button></h3>
+                        <div class="q-panel">
+                            <div class="q-panel-in">
+                                <p>Ove Halden, an engineer who spent twelve years at the regional utility before
+                                    founding the company in 2014. Halden Hydro develops and operates its own plants.
+                                    Three are running today. Audited accounts are included in the Investor Pack.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="q" data-open="false">
+                        <h3><button class="q-btn" aria-expanded="false"><span>What does the five-year term
+                                    mean?</span><span class="q-ico" aria-hidden="true"></span></button></h3>
+                        <div class="q-panel">
+                            <div class="q-panel-in">
+                                <p>The investment is offered on a five-year term, with interest paid annually from
+                                    commissioning. The precise start of the term, and the conditions that apply if you
+                                    want to exit before the end of it, are set out in the investment documentation. Read
+                                    that section before you commit money you may need back sooner. If anything there is
+                                    unclear, Investor Relations will answer it directly.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="q" data-open="false">
+                        <h3><button class="q-btn" aria-expanded="false"><span>Where does my money actually
+                                    go?</span><span class="q-ico" aria-hidden="true"></span></button></h3>
+                        <div class="q-panel">
+                            <div class="q-panel-in">
+                                <p>Into the Halden project specifically &mdash; this site, this build &mdash; rather
+                                    than into the company as a whole. The raise target is &euro;4.2m, of which
+                                    &euro;1.6m is committed so far across 340 investors. The use of funds is described
+                                    in the project prospectus.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="q" data-open="false">
+                        <h3><button class="q-btn" aria-expanded="false"><span>What are the main project
+                                    risks?</span><span class="q-ico" aria-hidden="true"></span></button></h3>
+                        <div class="q-panel">
+                            <div class="q-panel-in">
+                                <p>Three worth naming up front: a plant under construction still has to be completed and
+                                    commissioned; production depends on river flow, which varies; and the 9.4% figure is
+                                    projected rather than guaranteed, so your capital is at risk. The full risk section
+                                    is in the project prospectus, and it is the part we would read first in your
+                                    position.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== DOCUMENTS ===================== -->
+        <section class="sect docs dark">
+            <div class="wrap docs-grid">
+                <div>
+                    <span class="eyebrow">Documentation</span>
+                    <h2 class="h2" style="margin-bottom:20px">Don&rsquo;t take our word for it. Check the documents.
+                    </h2>
+                    <p class="lede">Everything on this page comes from the project documentation. You can read the same
+                        material before you decide anything.</p>
+                    <div class="hero-actions" style="margin-top:30px">
+                        <a class="btn btn-primary" href="#investor-pack">Get the Investor Pack</a>
+                    </div>
+                    <p class="cta-note">Review the documents before you decide.</p>
+                </div>
+
+                <ul class="doclist">
+                    <li>
+                        <svg class="doc-ico" viewBox="0 0 20 24" fill="none" aria-hidden="true">
+                            <path d="M3 1.6h9.2L17 6.3v16.1H3z" stroke="#9CC4CD" stroke-width="1.3"
+                                stroke-linejoin="round" />
+                            <path d="M12 1.8v4.8h4.8M6 12h8M6 15.6h8M6 19.2h5" stroke="#9CC4CD" stroke-width="1.3"
+                                stroke-linecap="round" />
+                        </svg>
+                        <div><b>Project prospectus</b><span>The project, the terms and the full risk section.</span>
+                        </div>
+                    </li>
+                    <li>
+                        <svg class="doc-ico" viewBox="0 0 20 24" fill="none" aria-hidden="true">
+                            <path d="M3 1.6h9.2L17 6.3v16.1H3z" stroke="#9CC4CD" stroke-width="1.3"
+                                stroke-linejoin="round" />
+                            <path d="M12 1.8v4.8h4.8M6.2 18.6l2.6-3.4 2.4 2 2.6-4.2" stroke="#9CC4CD" stroke-width="1.3"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <div><b>Production model</b><span>Expected output for the Halden site, built on 22 years of
+                                measured river flow.</span></div>
+                    </li>
+                    <li>
+                        <svg class="doc-ico" viewBox="0 0 20 24" fill="none" aria-hidden="true">
+                            <path d="M3 1.6h9.2L17 6.3v16.1H3z" stroke="#9CC4CD" stroke-width="1.3"
+                                stroke-linejoin="round" />
+                            <path d="M12 1.8v4.8h4.8M6 13.2h8M6 17h6" stroke="#9CC4CD" stroke-width="1.3"
+                                stroke-linecap="round" />
+                        </svg>
+                        <div><b>Project assumptions</b><span>What the model assumes, stated openly so you can test
+                                it.</span></div>
+                    </li>
+                    <li>
+                        <svg class="doc-ico" viewBox="0 0 20 24" fill="none" aria-hidden="true">
+                            <path d="M3 1.6h9.2L17 6.3v16.1H3z" stroke="#9CC4CD" stroke-width="1.3"
+                                stroke-linejoin="round" />
+                            <path d="M12 1.8v4.8h4.8" stroke="#9CC4CD" stroke-width="1.3" stroke-linecap="round" />
+                            <circle cx="10" cy="15.6" r="3.2" stroke="#9CC4CD" stroke-width="1.3" />
+                        </svg>
+                        <div><b>Concession documentation</b><span>The NVE concession and permitting paperwork for the
+                                site.</span></div>
+                    </li>
+                    <li>
+                        <svg class="doc-ico" viewBox="0 0 20 24" fill="none" aria-hidden="true">
+                            <path d="M3 1.6h9.2L17 6.3v16.1H3z" stroke="#9CC4CD" stroke-width="1.3"
+                                stroke-linejoin="round" />
+                            <path d="M12 1.8v4.8h4.8M6.4 16.2l2 2 4.4-4.6" stroke="#9CC4CD" stroke-width="1.3"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <div><b>Audited accounts</b><span>The company&rsquo;s audited financial statements.</span></div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===================== FORM ===================== -->
+        <section class="sect" id="investor-pack">
+            <div class="wrap form-wrap">
+                <div>
+                    <span class="eyebrow">Investor Pack</span>
+                    <h2 class="h2" style="margin-bottom:20px">Get the Investor Pack</h2>
+                    <p class="lede">Review the project details, production model, assumptions and supporting documents
+                        before making any decision.</p>
+                    <ul class="gets">
+                        <li>Project prospectus for Plant 4</li>
+                        <li>Production model and the assumptions behind it</li>
+                        <li>Concession documentation for the site</li>
+                        <li>Audited accounts</li>
+                        <li>A direct contact at Investor Relations if you have questions</li>
+                    </ul>
+                </div>
+
+                <div class="form-card">
+                    <form id="packForm" novalidate>
+                        <div class="row2">
+                            <div class="field">
+                                <label for="fn">First name</label>
+                                <input type="text" id="fn" name="firstName" autocomplete="given-name" required>
+                                <p class="err">Please enter your first name.</p>
+                            </div>
+                            <div class="field">
+                                <label for="ln">Last name</label>
+                                <input type="text" id="ln" name="lastName" autocomplete="family-name" required>
+                                <p class="err">Please enter your last name.</p>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label for="em">Email</label>
+                            <input type="email" id="em" name="email" autocomplete="email" inputmode="email" required>
+                            <p class="err">Please enter a valid email address.</p>
+                        </div>
+                        <div class="field">
+                            <label for="ph">Phone <span class="opt">(optional)</span></label>
+                            <input type="tel" id="ph" name="phone" autocomplete="tel" inputmode="tel">
+                        </div>
+
+                        <div class="consent">
+                            <input type="checkbox" id="cs" required>
+                            <label for="cs">I agree that Halden Hydro may contact me about this project and use my
+                                details in line with the privacy policy.</label>
+                        </div>
+                        <p class="err" id="csErr" style="margin:-14px 0 18px">Please tick the box so we can send you the
+                            pack.</p>
+
+                        <button type="submit" class="btn btn-primary btn-block">Send me the Investor Pack</button>
+                        <p class="form-foot">No obligation to invest. You can ask Investor Relations a question at any
+                            point.</p>
+                    </form>
+
+                    <div class="done" id="done" role="status" aria-live="polite">
+                        <svg class="done-mark" viewBox="0 0 46 46" fill="none" aria-hidden="true">
+                            <circle cx="23" cy="23" r="22" stroke="#2F6B7A" stroke-width="1.4" />
+                            <path d="M14 23.6l6 6 12-13" stroke="#2F6B7A" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                        <h3 class="h3">Your Investor Pack is ready.</h3>
+                        <p class="muted">It contains the project prospectus, the production model and its assumptions,
+                            the concession documentation and the audited accounts. We have also sent a copy to your
+                            email.</p>
+                        <div class="done-actions">
+                            <a class="btn btn-primary" href="#investor-pack">View Investor Pack</a>
+                            <div class="done-sec">
+                                <a class="btn btn-ghost" href="#investor-pack">Ask Investor Relations a question</a>
+                                <a class="btn btn-ghost" href="#investor-pack">Continue to investment platform</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="ftr">
+        <div class="wrap">
+            <div class="ftr-top">
+                <a class="brand" href="#top">
+                    <svg class="brand-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M2 15.2c2.4-2.6 4.8-2.6 7.2 0s4.8 2.6 7.2 0 4.8-2.6 5.6 0" stroke="#9CC4CD"
+                            stroke-width="1.5" stroke-linecap="round" />
+                        <path d="M2 20c2.4-2.6 4.8-2.6 7.2 0s4.8 2.6 7.2 0 4.8-2.6 5.6 0" stroke="#9CC4CD"
+                            stroke-width="1.5" stroke-linecap="round" opacity=".5" />
+                        <path d="M6.5 10.4V3.6h11v6.8" stroke="#F4F5F2" stroke-width="1.5" stroke-linejoin="round" />
+                        <path d="M12 3.6v6.8" stroke="#F4F5F2" stroke-width="1.5" />
+                    </svg>
+                    <span class="brand-txt" style="color:var(--paper)">Halden Hydro</span>
+                </a>
+                <nav class="ftr-links" aria-label="Footer">
+                    <a href="#project">Project</a>
+                    <a href="#track-record">Track record</a>
+                    <a href="#questions">Questions</a>
+                    <a href="#investor-pack">Investor Pack</a>
+                </nav>
+            </div>
+
+            <p class="risk">
+                <b>Investment risk notice.</b> Investing in this project involves risk, and your capital is at risk. The
+                9.4% p.a. figure shown on this page is a projected return based on a production model for the Halden
+                site. It is a projection, not a guarantee, and actual returns may be lower. Production from a
+                run-of-river plant depends on river flow, which varies from year to year, and the plant is still under
+                construction. Past performance of other plants is not an indicator of future results. Please read the
+                project prospectus, the production model and the full investment documentation in the Investor Pack
+                before making any investment decision, and consider taking independent advice.
+            </p>
+
+            <div class="ftr-btm">
+                <span>&copy; 2026 Halden Hydro</span>
+                <span>Run-of-river hydropower &middot; Norway</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===================== STICKY MOBILE CTA ===================== -->
+    <div class="sticky" id="sticky">
+        <a class="btn" href="#investor-pack">Get the Investor Pack</a>
+    </div>
+
+    <script>
+        (function () {
+            "use strict";
+
+            /* ---- accordion ---- */
+            document.querySelectorAll(".q").forEach(function (q) {
+                var btn = q.querySelector(".q-btn");
+                var panel = q.querySelector(".q-panel");
+                btn.addEventListener("click", function () {
+                    var open = q.getAttribute("data-open") === "true";
+                    if (open) {
+                        panel.style.height = panel.scrollHeight + "px";
+                        requestAnimationFrame(function () { panel.style.height = "0px"; });
+                        q.setAttribute("data-open", "false");
+                        btn.setAttribute("aria-expanded", "false");
+                    } else {
+                        panel.style.height = panel.scrollHeight + "px";
+                        q.setAttribute("data-open", "true");
+                        btn.setAttribute("aria-expanded", "true");
+                        panel.addEventListener("transitionend", function once() {
+                            if (q.getAttribute("data-open") === "true") { panel.style.height = "auto"; }
+                            panel.removeEventListener("transitionend", once);
+                        });
+                    }
+                });
+            });
+
+            /* ---- sticky mobile CTA: show after hero, hide over the form ---- */
+            var sticky = document.getElementById("sticky");
+            var form = document.getElementById("investor-pack");
+            var onScroll = function () {
+                var past = window.scrollY > window.innerHeight * 0.75;
+                var atForm = form.getBoundingClientRect().top < window.innerHeight * 0.9;
+                sticky.classList.toggle("on", past && !atForm);
+            };
+            window.addEventListener("scroll", onScroll, { passive: true });
+            onScroll();
+
+            /* ---- form ---- */
+            var f = document.getElementById("packForm");
+            var done = document.getElementById("done");
+            var csErr = document.getElementById("csErr");
+            csErr.style.display = "none";
+
+            var clear = function (el) { el.setAttribute("aria-invalid", "false"); };
+            ["fn", "ln", "em"].forEach(function (id) {
+                document.getElementById(id).addEventListener("input", function () { clear(this); });
+            });
+            document.getElementById("cs").addEventListener("change", function () {
+                if (this.checked) { csErr.style.display = "none"; }
+            });
+
+            f.addEventListener("submit", function (e) {
+                e.preventDefault();
+                var fn = document.getElementById("fn"),
+                    ln = document.getElementById("ln"),
+                    em = document.getElementById("em"),
+                    cs = document.getElementById("cs"),
+                    ok = true, first = null;
+
+                var check = function (el, valid) {
+                    el.setAttribute("aria-invalid", valid ? "false" : "true");
+                    if (!valid) { ok = false; if (!first) first = el; }
+                };
+                check(fn, fn.value.trim().length > 0);
+                check(ln, ln.value.trim().length > 0);
+                check(em, /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em.value.trim()));
+
+                if (!cs.checked) { csErr.style.display = "block"; ok = false; if (!first) first = cs; }
+                else { csErr.style.display = "none"; }
+
+                if (!ok) { if (first) first.focus(); return; }
+
+                f.style.display = "none";
+                done.classList.add("on");
+                done.scrollIntoView({ behavior: "smooth", block: "center" });
+                sticky.classList.remove("on");
+            });
+        })();
+    </script>
+</body>
+
+</html>
